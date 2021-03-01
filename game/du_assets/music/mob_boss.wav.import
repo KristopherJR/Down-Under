@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mob_boss.wav-7c725a4b0030259abc5b4a4438c186df.sample"
+
+[deps]
+
+source_file="res://du_assets/music/mob_boss.wav"
+dest_files=[ "res://.import/mob_boss.wav-7c725a4b0030259abc5b4a4438c186df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/life_loss.wav-b553d1be579144657ce4e2a66e15f3e3.sample"
+
+[deps]
+
+source_file="res://du_assets/sfx/life_loss.wav"
+dest_files=[ "res://.import/life_loss.wav-b553d1be579144657ce4e2a66e15f3e3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
