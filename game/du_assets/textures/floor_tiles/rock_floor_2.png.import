@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floor_tiles.png-8779cf1f276360be2526351885f6ea6f.stex"
+path="res://.import/rock_floor_2.png-63518c4e35fddce28e3da05660ae25b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/floor_tiles.png"
-dest_files=[ "res://.import/floor_tiles.png-8779cf1f276360be2526351885f6ea6f.stex" ]
+source_file="res://du_assets/textures/floor_tiles/rock_floor_2.png"
+dest_files=[ "res://.import/rock_floor_2.png-63518c4e35fddce28e3da05660ae25b4.stex" ]
 
 [params]
 
