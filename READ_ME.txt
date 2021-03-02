@@ -2,25 +2,31 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle & Abdul-Roqeeb Oloruntele
 
-Version: 0.1
-Date: 01-03-2021
+Version: 0.1.1
+Date: 02-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Initial version of the project. At this stage, the project has been set-up using a YouTube guide found here: https://www.youtube.com/watch?v=Mc13Z2gboEk
-
-This version sees the implementation of basic collision physics. There is a player token with a static asset, it is not animated yet.
-
-A floor tile map has also been added and the player spawns, and falls onto it. The player can press WASD, The arrow keys or use a gamepad to move the player token.
-
-If the player walks off the edge, they fall off the map as gravity has also been implemented.
+Player now spawns in the world and collides with a floor. The player is no longer a normal sprite, but an "animatedsprite". The sprite has been
+animated and will now shift animations depending if it is moving left, right or is idle. The player can also "jump" by pressing W, the up arrow 
+or using a gamepad.
 
 // --------------- NEW SCENES --------------- //
 
-Player.tscn
-LevelOne.tscn
+N/A
+
+// --------------- EDITED SCENES--------------- //
+
+LevelOne.tcsn
+Player.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
+N/A
+
+// --------------- EDITED SCRIPTS --------------- //
+
 Actor.gd
 Player.gd
+
+
