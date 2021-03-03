@@ -1,26 +1,26 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/right/idle_right_1.png" type="Texture" id=1]
+[ext_resource path="res://du_assets/textures/player_token/idle/right/idle_right_1.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/right/idle_right_2.png" type="Texture" id=3]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/right/idle_right_3.png" type="Texture" id=4]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/right/idle_right_4.png" type="Texture" id=5]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_2.png" type="Texture" id=6]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_2.png" type="Texture" id=7]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_3.png" type="Texture" id=8]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/left/idle_left_1.png" type="Texture" id=9]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/left/idle_left_3.png" type="Texture" id=10]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_1.png" type="Texture" id=11]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_4.png" type="Texture" id=12]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_5.png" type="Texture" id=13]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/left/running_left_6.png" type="Texture" id=14]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/left/idle_left_2.png" type="Texture" id=15]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_1.png" type="Texture" id=16]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_3.png" type="Texture" id=17]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/idle/left/idle_left_4.png" type="Texture" id=18]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_4.png" type="Texture" id=19]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_5.png" type="Texture" id=20]
-[ext_resource path="res://du_assets/textures/floor_tiles/player_token/running/right/running_right_6.png" type="Texture" id=21]
+[ext_resource path="res://du_assets/textures/player_token/idle/right/idle_right_2.png" type="Texture" id=3]
+[ext_resource path="res://du_assets/textures/player_token/idle/right/idle_right_3.png" type="Texture" id=4]
+[ext_resource path="res://du_assets/textures/player_token/idle/right/idle_right_4.png" type="Texture" id=5]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_2.png" type="Texture" id=6]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_2.png" type="Texture" id=7]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_3.png" type="Texture" id=8]
+[ext_resource path="res://du_assets/textures/player_token/idle/left/idle_left_1.png" type="Texture" id=9]
+[ext_resource path="res://du_assets/textures/player_token/idle/left/idle_left_3.png" type="Texture" id=10]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_1.png" type="Texture" id=11]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_4.png" type="Texture" id=12]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_5.png" type="Texture" id=13]
+[ext_resource path="res://du_assets/textures/player_token/running/left/running_left_6.png" type="Texture" id=14]
+[ext_resource path="res://du_assets/textures/player_token/idle/left/idle_left_2.png" type="Texture" id=15]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_1.png" type="Texture" id=16]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_3.png" type="Texture" id=17]
+[ext_resource path="res://du_assets/textures/player_token/idle/left/idle_left_4.png" type="Texture" id=18]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_4.png" type="Texture" id=19]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_5.png" type="Texture" id=20]
+[ext_resource path="res://du_assets/textures/player_token/running/right/running_right_6.png" type="Texture" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -34,26 +34,25 @@ animations = [ {
 "name": "running_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "idle_left",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "running_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "idle_left",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9, 16.8512 )
 
-[node name="player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -19 )
 collision_mask = 8
 script = ExtResource( 2 )
-speed = Vector2( 100, 1000 )
-gravity = 500.0
+speed = Vector2( 100, 100 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.0196829, -0.153488 )
@@ -65,3 +64,8 @@ speed_scale = 1.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.84754, 2.13689 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -60.1352 )
+current = true
+zoom = Vector2( 0.3, 0.3 )

@@ -1,0 +1,76 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right1.png" type="Texture" id=1]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right2.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right4.png" type="Texture" id=3]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right2.png" type="Texture" id=4]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right3.png" type="Texture" id=5]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right1.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right2.png" type="Texture" id=7]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right4.png" type="Texture" id=8]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right6.png" type="Texture" id=9]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right4.png" type="Texture" id=10]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right5.png" type="Texture" id=11]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right3.png" type="Texture" id=12]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right5.png" type="Texture" id=13]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/idle_right/idle_right6.png" type="Texture" id=14]
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right3.png" type="Texture" id=15]
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right6.png" type="Texture" id=16]
+[ext_resource path="res://src/Actors/wiggle_right/wiggle_right5.png" type="Texture" id=17]
+[ext_resource path="res://src/Actors/Worm.gd" type="Script" id=18]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right1.png" type="Texture" id=19]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right2.png" type="Texture" id=20]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right3.png" type="Texture" id=21]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right6.png" type="Texture" id=22]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/death_right/death_right1.png" type="Texture" id=23]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right4.png" type="Texture" id=24]
+[ext_resource path="res://du_assets/textures/enemies/worm_token/attack_right/attack_right5.png" type="Texture" id=25]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "wiggle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "death_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "attack_right",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23.0983, 4.9674 )
+
+[node name="Worm" type="KinematicBody2D"]
+position = Vector2( 0, -19 )
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 18 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0200567, 11.734 )
+scale = Vector2( 0.182411, 0.182411 )
+frames = SubResource( 1 )
+animation = "idle_right"
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.242754, 14.1187 )
+shape = SubResource( 2 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 0.236233, 8.87388 )
+rect = Rect2( -25, 0, 50, 10 )
+process_parent = true
+physics_process_parent = true
