@@ -309,4 +309,4 @@ position = Vector2( 486.562, 959.855 )
 speed = Vector2( 100, 250 )
 
 [node name="Worm" parent="." instance=ExtResource( 6 )]
-position = Vector2( 391.341, 940.99 )
+position = Vector2( 247.178, 965.017 )

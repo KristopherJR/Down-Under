@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wiggle_right1.png-20f7344e3b1ccc79f4158a2f7e1d4663.stex"
+path="res://.import/wiggle_right2.png-5a10dc9e18987d45721769f8a331a0b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Actors/wiggle_right/wiggle_right1.png"
-dest_files=[ "res://.import/wiggle_right1.png-20f7344e3b1ccc79f4158a2f7e1d4663.stex" ]
+source_file="res://du_assets/textures/enemies/worm_token/wiggle_right/wiggle_right2.png"
+dest_files=[ "res://.import/wiggle_right2.png-5a10dc9e18987d45721769f8a331a0b7.stex" ]
 
 [params]
 
