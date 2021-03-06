@@ -2,8 +2,15 @@ extends Actor
 
 
 func _ready() -> void:
-	set_physics_process(false)
+	set_physics_process(false) #deactivate enemy at start of game
+	speed.x = 150
 	_velocity.x = -speed.x
+	
+#kills worm if bounce on head
+func _on_StompDetector_body_entered(body: Node) -> void:
+	if body.global_position.y > get_node("StompDetector").global_position.y:
+		return
+	queue_free() #kills the worm
 
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +30,6 @@ func select_animation(
 		$AnimatedSprite.set_flip_h(false)
 	if _velocity.x < 0.0:
 		$AnimatedSprite.set_flip_h(true)
+
+
+
