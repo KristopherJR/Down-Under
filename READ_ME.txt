@@ -2,12 +2,13 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.1.3
+Version: 0.1.4
 Date: 06-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Worm speed halved. Stomp detector implemented. The player can now jump on a Worms head to 'kill' it, removing it from the game.
+Formatted hitboxes better. Changed Tilemap. Added a background. Made the camera has boundaries so it snaps to the left and right walls, and added
+smoothing. When a player jumps on an enemy and kills it, they now bounce into the air.
 
 // --------------- NEW SCENES --------------- //
 
@@ -16,6 +17,8 @@ N/A
 // --------------- EDITED SCENES --------------- //
 
 Worm.tcsn
+Player.tcsn
+LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 

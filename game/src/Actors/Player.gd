@@ -1,5 +1,12 @@
 extends Actor
 
+export var stomp_impulse: = 1000.0
+
+func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
+	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse) #make player bounce when it kills enemy
+
+func _on_EnemyDetector_body_entered(_body: Node) -> void:
+	queue_free() #kill character when an enemy touches player
 
 func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -45,6 +52,17 @@ func select_animation() -> void:
 	if Input.is_action_just_released("move_left"):
 		$AnimatedSprite.play("idle_right")
 		$AnimatedSprite.set_flip_h(true)
+		
+func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
+	var out: = linear_velocity
+	out.y = -impulse
+	return out
 	
 	
 	
+
+
+
+
+
+
