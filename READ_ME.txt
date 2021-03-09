@@ -2,26 +2,31 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.1.5
+Version: 0.1.51
 Date: 09-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Most of UI for main menu created. Still some weird placement issues with the rock platform.
-Yet to program any functionality for the UI. Created alot of textures for the Main Menu UI elements.
+UI components placed better. New game and Quit are now clickable and function. All buttons change texture
+when hovered.
 
 // --------------- NEW SCENES --------------- //
 
-MainMenu.tcsn
+change_scene_button.tcsn
+new_game_button.tcsn
+load_game_button.tcsn
+options_button.tcsn
+quit_button.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
-N/A
+MainMenu.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
-MainMenu.gd
+new_game_button.gd
+quit_button.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-N/A
+MainMenu.gd
