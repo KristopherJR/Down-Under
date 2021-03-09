@@ -2,29 +2,26 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.1.4
-Date: 06-03-2021
+Version: 0.1.5
+Date: 09-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Formatted hitboxes better. Changed Tilemap. Added a background. Made the camera has boundaries so it snaps to the left and right walls, and added
-smoothing. When a player jumps on an enemy and kills it, they now bounce into the air.
+Most of UI for main menu created. Still some weird placement issues with the rock platform.
+Yet to program any functionality for the UI. Created alot of textures for the Main Menu UI elements.
 
 // --------------- NEW SCENES --------------- //
 
-N/A
+MainMenu.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
-Worm.tcsn
-Player.tcsn
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-N/A
+MainMenu.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-Player.gd
-Worm.gd
+N/A
