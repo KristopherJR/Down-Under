@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Down Under"
 run/main_scene="res://src/Levels/LevelOne.tscn"
 
+[autoload]
+
+Pause="*res://src/Actors/Pause.tscn"
+
 [display]
 
 window/size/width=1920

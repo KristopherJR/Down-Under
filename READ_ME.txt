@@ -1,30 +1,27 @@
 Team: The Boomers & The Zoomer
 Project Title: Down Under
-Developers: Kristopher Randle
+Developers: Abdul-Roqeeb Oloruntele
 
-Version: 0.1.4
-Date: 06-03-2021
+Version: 0.1.5
+Date: 11-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Formatted hitboxes better. Changed Tilemap. Added a background. Made the camera has boundaries so it snaps to the left and right walls, and added
-smoothing. When a player jumps on an enemy and kills it, they now bounce into the air.
+Pressing the "Esc" key now pauses and plays the game. I've added a  "Fullscreen" button which toggles fullscreen on and off when pressed. 
+There is also save game, load game, options and main menu buttons but they do not yet have any function.
 
 // --------------- NEW SCENES --------------- //
 
-N/A
+Pause.tscn
 
 // --------------- EDITED SCENES --------------- //
 
-Worm.tcsn
-Player.tcsn
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-N/A
+Pause.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-Player.gd
-Worm.gd
+N/A
