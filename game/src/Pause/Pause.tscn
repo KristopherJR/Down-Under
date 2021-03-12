@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/Actors/Pause.gd" type="Script" id=1]
+[ext_resource path="res://src/Pause/Pause.gd" type="Script" id=1]
 [ext_resource path="res://du_assets/textures/tiles/cave_wall_3.png" type="Texture" id=2]
 [ext_resource path="res://du_assets/textures/pause_options/resume.png" type="Texture" id=3]
 [ext_resource path="res://du_assets/textures/pause_options/fullscreen.png" type="Texture" id=4]
@@ -8,6 +8,7 @@
 [ext_resource path="res://du_assets/textures/pause_options/load_game.png" type="Texture" id=6]
 [ext_resource path="res://du_assets/textures/pause_options/options.png" type="Texture" id=7]
 [ext_resource path="res://du_assets/textures/pause_options/main_menu.png" type="Texture" id=8]
+
 
 [node name="CanvasLayer" type="CanvasLayer"]
 pause_mode = 2

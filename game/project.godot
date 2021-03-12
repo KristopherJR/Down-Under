@@ -25,7 +25,7 @@ run/main_scene="res://src/Levels/LevelOne.tscn"
 
 [autoload]
 
-Pause="*res://src/Actors/Pause.tscn"
+Pause="*res://src/Pause/Pause.tscn"
 
 [display]
 
