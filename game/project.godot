@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Down Under"
-run/main_scene="res://src/Levels/LevelOne.tscn"
+run/main_scene="res://src/Screens/MainMenu.tscn"
 
 [display]
 
