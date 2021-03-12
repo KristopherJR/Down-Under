@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Down Under"
 run/main_scene="res://src/Screens/MainMenu.tscn"
 
+[autoload]
+
+Pause="*res://src/Pause/Pause.tscn"
+
 [display]
 
 window/size/width=1920
