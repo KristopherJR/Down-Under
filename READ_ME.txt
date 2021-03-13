@@ -7,7 +7,7 @@ Date: 13-03-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Change LevelOne.tcsn to CampLevel.tcsn. Created new art assets for the camp.
+Change LevelOne.tcsn to CampLevel.tcsn. Created new art assets for the camp. Lol
 
 // --------------- NEW SCENES --------------- //
 
