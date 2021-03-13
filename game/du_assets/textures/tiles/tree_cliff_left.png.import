@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave_night.png-39a2f9317fd337292023dd642093a1df.stex"
+path="res://.import/tree_cliff_left.png-c991fd6172faf2e47e99c4391e2b9926.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/cave_entrance/cave_night.png"
-dest_files=[ "res://.import/cave_night.png-39a2f9317fd337292023dd642093a1df.stex" ]
+source_file="res://du_assets/textures/tiles/tree_cliff_left.png"
+dest_files=[ "res://.import/tree_cliff_left.png-c991fd6172faf2e47e99c4391e2b9926.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

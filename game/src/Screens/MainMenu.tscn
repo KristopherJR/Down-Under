@@ -1,28 +1,15 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://du_assets/textures/main_menu_ui/title_noeffect.png" type="Texture" id=1]
 [ext_resource path="res://src/UI/change_scene_button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UI/options_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/quit_button.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UI/load_game_button.tscn" type="PackedScene" id=5]
-[ext_resource path="res://du_assets/textures/campfire/campfire_1.png" type="Texture" id=6]
+[ext_resource path="res://src/GameObjects/campfire.tscn" type="PackedScene" id=6]
 [ext_resource path="res://du_assets/textures/main_menu_ui/rock_platform_ui.png" type="Texture" id=7]
-[ext_resource path="res://du_assets/textures/campfire/campfire_2.png" type="Texture" id=8]
-[ext_resource path="res://du_assets/textures/campfire/campfire_4.png" type="Texture" id=9]
-[ext_resource path="res://du_assets/textures/campfire/campfire_6.png" type="Texture" id=10]
-[ext_resource path="res://du_assets/textures/campfire/campfire_3.png" type="Texture" id=11]
-[ext_resource path="res://du_assets/textures/campfire/campfire_5.png" type="Texture" id=12]
 [ext_resource path="res://src/Screens/MainMenu.gd" type="Script" id=13]
 [ext_resource path="res://du_assets/textures/dark_sky_tile.png" type="Texture" id=14]
 [ext_resource path="res://du_assets/music/main_menu.wav" type="AudioStream" id=15]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -62,12 +49,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="campfire" type="AnimatedSprite" parent="Rock"]
-position = Vector2( 216.652, 750.371 )
-frames = SubResource( 1 )
+[node name="campfire" parent="Rock" instance=ExtResource( 6 )]
+position = Vector2( 210, 754 )
 frame = 3
-speed_scale = 1.5
-playing = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_right = 1920.0
@@ -106,7 +90,7 @@ margin_bottom = 195.0
 [node name="version_label" type="Label" parent="MarginContainer/VBoxContainer/Title and Version/VBoxContainer"]
 margin_right = 375.0
 margin_bottom = 48.0
-text = "Version: 0.1.5
+text = "Version: 0.1.7
 Developers: Kristopher Randle & Abdul-Roqeeb Oloruntele
 Team: The Boomers & The Zoomer"
 __meta__ = {
@@ -130,7 +114,7 @@ alignment = 1
 margin_right = 740.0
 margin_bottom = 145.0
 size_flags_horizontal = 0
-next_scene_path = "res://src/Levels/LevelOne.tscn"
+next_scene_path = "res://src/Levels/CampLevel.tscn"
 
 [node name="load_game_button" parent="MarginContainer/VBoxContainer/HBoxContainer/MenuButtons" instance=ExtResource( 5 )]
 margin_top = 185.0

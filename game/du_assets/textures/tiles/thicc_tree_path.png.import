@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave_day.png-47fb3e6e45e8e304cafec1189c70f8d3.stex"
+path="res://.import/thicc_tree_path.png-5f0173717892ad69047c354783813e76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/cave_entrance/cave_day.png"
-dest_files=[ "res://.import/cave_day.png-47fb3e6e45e8e304cafec1189c70f8d3.stex" ]
+source_file="res://du_assets/textures/tiles/thicc_tree_path.png"
+dest_files=[ "res://.import/thicc_tree_path.png-5f0173717892ad69047c354783813e76.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

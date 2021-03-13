@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cave_morning.png-50e770c86e830eac63c3e9e70edb391b.stex"
+path="res://.import/cave_entrance.png-fc33b3cab678cb14262dbc93837d1a1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/cave_entrance/cave_morning.png"
-dest_files=[ "res://.import/cave_morning.png-50e770c86e830eac63c3e9e70edb391b.stex" ]
+source_file="res://du_assets/textures/tiles/cave_entrance.png"
+dest_files=[ "res://.import/cave_entrance.png-fc33b3cab678cb14262dbc93837d1a1e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -9,7 +9,6 @@
 [ext_resource path="res://du_assets/textures/pause_options/options.png" type="Texture" id=7]
 [ext_resource path="res://du_assets/textures/pause_options/main_menu.png" type="Texture" id=8]
 
-
 [node name="CanvasLayer" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 1 )

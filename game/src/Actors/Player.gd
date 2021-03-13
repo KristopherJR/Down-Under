@@ -31,7 +31,7 @@ func calculate_move_velocity(
 	out.x = speed.x * direction.x 
 	out.y += gravity * get_physics_process_delta_time() #ADD gravity to the player
 	if direction.y == -1.0: #PLAYER has hit 'jump'
-		out.y = speed.y * direction.y	
+		out.y = (speed.y * direction.y) * 2	
 	if is_jump_interrupted: #IF player has let go of 'jump' and is falling
 		out.y = 0.0
 	return out

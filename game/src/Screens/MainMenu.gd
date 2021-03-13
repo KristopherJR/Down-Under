@@ -1,7 +1,7 @@
 extends Control
 
 var main_menu = 'res://src/Levels/MainMenu.tscn'
-var game_scene = 'res://src/Levels/LevelOne.tscn'
+var camp_scene = 'res://src/Levels/CampLevel.tcsn'
 
 var current_level = 1
 var number_of_levels = 1
