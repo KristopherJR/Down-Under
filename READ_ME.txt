@@ -1,26 +1,29 @@
 Team: The Boomers & The Zoomer
 Project Title: Down Under
-Developers: Abdul-Roqeeb Oloruntele & Kristopher Randle
+Developers: Abdul-Roqeeb Oloruntele
 
-Version: 0.1.7
-Date: 13-03-2021
+Version: 0.1.8
+Date: 17-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Change LevelOne.tcsn to CampLevel.tcsn. Created new art assets for the camp. Lol
+linked the main menu button. Made a save load function but it is still not working as intended (it's not working at all)
 
 // --------------- NEW SCENES --------------- //
 
-N/A
+SaveGame.tscn
+SaveInterface.tscn
 
 // --------------- EDITED SCENES --------------- //
 
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-N/A
+SaveGame.gd
+SaveDictionary.gd
+SaveInterface.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-MainMenu.gd
+Pause.gd

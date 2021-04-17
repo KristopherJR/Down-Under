@@ -58,11 +58,12 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 	out.y = -impulse
 	return out
 	
+# SAVE Player data
+onready var SAVE_ID : String = "level" + name
+
+func save(save_game : Resource):
+	save_game.data[SAVE_ID] = {"location" : _velocity}
 	
-	
-
-
-
-
-
-
+func load(save_game: Resource):
+	var data: Dictionary = save_game.data[SAVE_ID]
+	_velocity = data["location"]

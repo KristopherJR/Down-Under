@@ -13,19 +13,29 @@ _global_script_classes=[ {
 "class": "Actor",
 "language": "GDScript",
 "path": "res://src/Actors/Actor.gd"
+}, {
+"base": "Resource",
+"class": "GameSaves",
+"language": "GDScript",
+"path": "res://src/Save/SaveDictionary.gd"
 } ]
 _global_script_class_icons={
-"Actor": ""
+"Actor": "",
+"GameSaves": ""
 }
 
 [application]
 
 config/name="Down Under"
 run/main_scene="res://src/Screens/MainMenu.tscn"
+config/use_custom_user_dir=true
+config/Version="0.1"
 
 [autoload]
 
 Pause="*res://src/Pause/Pause.tscn"
+NewScreen="*res://src/UI/SceneTransition/NewScreen.gd"
+Options="*res://src/Options/Options.tscn"
 
 [display]
 

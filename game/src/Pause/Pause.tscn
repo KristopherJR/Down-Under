@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Pause/Pause.gd" type="Script" id=1]
 [ext_resource path="res://du_assets/textures/tiles/cave_wall_3.png" type="Texture" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://du_assets/textures/pause_options/load_game.png" type="Texture" id=6]
 [ext_resource path="res://du_assets/textures/pause_options/options.png" type="Texture" id=7]
 [ext_resource path="res://du_assets/textures/pause_options/main_menu.png" type="Texture" id=8]
+[ext_resource path="res://src/Save/SaveInterface.tscn" type="PackedScene" id=9]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="PauseLayer" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 1 )
 
@@ -102,8 +103,15 @@ margin_right = 1926.55
 margin_bottom = 1070.12
 rect_scale = Vector2( 0.30093, 0.316096 )
 icon = ExtResource( 8 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SaveGame2" parent="." instance=ExtResource( 9 )]
 [connection signal="pressed" from="Resume" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="SaveGame" to="SaveGame2" method="_on_SaveGame_pressed"]
+[connection signal="pressed" from="LoadGame" to="SaveGame2" method="_on_LoadGame_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
