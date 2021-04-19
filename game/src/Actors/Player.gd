@@ -1,5 +1,7 @@
 extends Actor
 
+var isMining = false
+
 export var stomp_impulse: = 1000.0
 
 func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
@@ -52,6 +54,12 @@ func select_animation() -> void:
 	if Input.is_action_just_released("move_left"):
 		$AnimatedSprite.play("idle_right")
 		$AnimatedSprite.set_flip_h(true)
+		
+	if Input.is_action_just_pressed("mining"):
+		isMining = true
+		
+	if Input.is_action_just_pressed("mining"):
+		isMining = false
 		
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
 	var out: = linear_velocity

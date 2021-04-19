@@ -34,14 +34,14 @@ animations = [ {
 "name": "idle_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "running_right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "running_right",
 "speed": 5.0
 } ]
 
