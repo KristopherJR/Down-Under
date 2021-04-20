@@ -26,6 +26,7 @@ run/main_scene="res://src/Screens/MainMenu.tscn"
 [autoload]
 
 Pause="*res://src/Pause/Pause.tscn"
+SceneChanger="*res://src/Levels/SceneChanger.tscn"
 
 [display]
 

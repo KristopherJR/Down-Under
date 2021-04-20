@@ -1,13 +1,13 @@
 Team: The Boomers & The Zoomer
 Project Title: Down Under
-Developers: Abdul-Roqeeb Oloruntele & Kristopher Randle
+Developers: Kristopher Randle
 
-Version: 0.1.7
-Date: 13-03-2021
+Version: 0.1.8
+Date: 20-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Change LevelOne.tcsn to CampLevel.tcsn. Created new art assets for the camp. Lol
+Trying to change scenes but cant
 
 // --------------- NEW SCENES --------------- //
 

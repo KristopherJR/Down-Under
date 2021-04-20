@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/GameObjects/campfire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=3]
+[ext_resource path="res://src/Levels/CampLevel.gd" type="Script" id=4]
 [ext_resource path="res://du_assets/textures/sky_tile.png" type="Texture" id=15]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17.9929, 48.6721 )
+
 [node name="CampLevel" type="Node2D"]
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 1040.0 ]
@@ -37,10 +42,12 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 458.085, 623.759 )
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 3
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1920
@@ -48,5 +55,13 @@ limit_bottom = 1000000000
 
 [node name="Worm" parent="." instance=ExtResource( 30 )]
 position = Vector2( 541.748, 663.967 )
+
+[node name="DoorHitbox" type="StaticBody2D" parent="."]
+position = Vector2( 1731.4, 1006.86 )
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorHitbox"]
+position = Vector2( -0.00012207, 6.10352e-05 )
+shape = SubResource( 1 )
 
 [editable path="Player"]
