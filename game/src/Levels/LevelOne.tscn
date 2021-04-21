@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/GameObjects/Spikes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
@@ -52,3 +53,76 @@ position = Vector2( 1248, 1127.74 )
 position = Vector2( 8, 120 )
 scale = Vector2( 2, 8 )
 level_path = "res://src/Levels/CampLevel.tscn"
+
+[node name="Spikepit1" type="VBoxContainer" parent="."]
+margin_left = 1280.0
+margin_top = 512.0
+margin_right = 1280.0
+margin_bottom = 512.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spikes" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 16, 0 )
+
+[node name="Spikes2" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+
+[node name="Spikes3" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+
+[node name="Spikes4" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 112, 0 )
+
+[node name="Spikes5" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 144, 0 )
+
+[node name="Spikes6" parent="Spikepit1" instance=ExtResource( 4 )]
+position = Vector2( 176, 0 )
+
+[node name="Spikepit2" type="VBoxContainer" parent="."]
+margin_left = 2064.0
+margin_top = 1104.0
+margin_right = 2064.0
+margin_bottom = 1104.0
+size_flags_horizontal = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spikes" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 16, 0 )
+
+[node name="Spikes2" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+
+[node name="Spikes3" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+
+[node name="Spikes4" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 112, 0 )
+
+[node name="Spikes5" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 144, 0 )
+
+[node name="Spikes6" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 176, 0 )
+
+[node name="Spikes7" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 208, 0 )
+
+[node name="Spikes8" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 240, 0 )
+
+[node name="Spikes9" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 272, 0 )
+
+[node name="Spikes10" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 304, 0 )
+
+[node name="Spikes11" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 336, 0 )
+
+[node name="Spikes12" parent="Spikepit2" instance=ExtResource( 4 )]
+position = Vector2( 352, 0 )
