@@ -7,7 +7,8 @@ func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	queue_free() #kill character when an enemy touches player
-
+	get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
+	
 func _ready() -> void:
 	$AnimatedSprite.play("idle_right")
 

@@ -6,7 +6,6 @@
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://du_assets/textures/sky_tile.png" type="Texture" id=15]
 
-
 [sub_resource type="GDScript" id=1]
 
 [node name="CampLevel" type="Node2D"]
@@ -41,13 +40,12 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 3
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 237.298, 1045.18 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 2
+frame = 3
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1920

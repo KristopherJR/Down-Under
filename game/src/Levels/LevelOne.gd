@@ -9,4 +9,5 @@ func _physics_process(delta: float) -> void:
 	print(air_timer)
 	if air_timer >= gas_timer:
 		get_node("Player").queue_free()
+		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
 
