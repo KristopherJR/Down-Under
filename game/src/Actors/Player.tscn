@@ -62,7 +62,7 @@ position = Vector2( 0, -19.182 )
 scale = Vector2( 0.182411, 0.182411 )
 frames = SubResource( 1 )
 animation = "running_right"
-frame = 2
+frame = 1
 speed_scale = 1.5
 playing = true
 

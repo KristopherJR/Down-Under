@@ -1,10 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/GameObjects/campfire.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/GameObjects/Campfire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=3]
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://du_assets/textures/sky_tile.png" type="Texture" id=15]
+
 
 [sub_resource type="GDScript" id=1]
 
