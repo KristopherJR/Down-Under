@@ -2,24 +2,24 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.1.9
+Version: 0.1.91
 Date: 21-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added a Spike scene and populated the Cave Level with 2 spike pits which kill the player if he falls on them.
+Added Oxygen to the cave. The player will now die of toxic gas if they're in the cave longer than 5 minutes.
 
 // --------------- NEW SCENES --------------- //
 
-Spike.tcsn
+N/A
 
 // --------------- EDITED SCENES --------------- //
 
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-Spike.gd
+LevelOne.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
