@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GameObjects/Spikes.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/LevelOne.gd" type="Script" id=5]
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
 [node name="LevelOne" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
