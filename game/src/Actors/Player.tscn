@@ -29,11 +29,6 @@ animations = [ {
 "name": "idle_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "running_right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle_left",
@@ -42,6 +37,11 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "running_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "running_right",
 "speed": 5.0
 } ]
 
@@ -62,7 +62,7 @@ position = Vector2( 0, -19.182 )
 scale = Vector2( 0.182411, 0.182411 )
 frames = SubResource( 1 )
 animation = "running_right"
-frame = 5
+frame = 2
 speed_scale = 1.5
 playing = true
 
