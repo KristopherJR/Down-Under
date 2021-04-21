@@ -25,6 +25,7 @@ items: from "gamecollectablepackpixelart_windows.zip"
 ---------- MUSIC ----------
 
 home_screen: tbd
+camp_music: "8bit Stage6 Loop" from "8bittunespack_windows"
 background_music: tbd
 time_running_out: "Missing_Mysteries_NES.wav" from "pure8bitmagic_windows"
 mob_boss: "waiting_for_events_120_BPM.wav" from "musicloopsfor8bitgames"
