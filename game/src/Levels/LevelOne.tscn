@@ -187,6 +187,467 @@ scale = Vector2( 0.15, 0.15 )
 position = Vector2( 96, 0 )
 scale = Vector2( 0.15, 0.15 )
 
+[node name="CoinGroup2" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 648.0
+margin_top = 144.0
+margin_right = 648.0
+margin_bottom = 144.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup2" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup2" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup2" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup13" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1672.0
+margin_top = 1072.0
+margin_right = 1672.0
+margin_bottom = 1072.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup13" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup13" instance=ExtResource( 7 )]
+position = Vector2( 144, -24 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup13" instance=ExtResource( 7 )]
+position = Vector2( 192, -48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup13" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup13" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup12" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2480.0
+margin_top = 1008.0
+margin_right = 2480.0
+margin_bottom = 1008.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup12" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -192, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -144, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin6" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -320, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin7" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -272, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin8" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -456, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin9" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -512, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin10" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -568, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin12" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -1096, 48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin13" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -1144, 48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin16" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -1568, 48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin18" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -1536, 80 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin14" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -944, 112 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin15" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -992, 112 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin17" parent="CoinGroup12" instance=ExtResource( 7 )]
+position = Vector2( -1040, 80 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup11" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2912.0
+margin_top = 1008.0
+margin_right = 2912.0
+margin_bottom = 1008.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin2" parent="CoinGroup11" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup11" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup10" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2816.0
+margin_top = 448.0
+margin_right = 2816.0
+margin_bottom = 448.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup10" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 272, 32 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 160, 80 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin6" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 272, 128 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin7" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 160, 176 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin8" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 272, 224 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin9" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 160, 272 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin10" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 272, 320 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin11" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 160, 368 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin12" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 208, 432 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin13" parent="CoinGroup10" instance=ExtResource( 7 )]
+position = Vector2( 240, 528 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup9" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2456.0
+margin_top = 560.0
+margin_right = 2456.0
+margin_bottom = 560.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup9" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 144, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 192, -16 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin6" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 240, -40 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin7" parent="CoinGroup9" instance=ExtResource( 7 )]
+position = Vector2( 288, -56 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup7" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1760.0
+margin_top = 208.0
+margin_right = 1760.0
+margin_bottom = 208.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup7" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup7" instance=ExtResource( 7 )]
+position = Vector2( 128, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup8" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2128.0
+margin_top = 296.0
+margin_right = 2128.0
+margin_bottom = 296.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup8" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup8" instance=ExtResource( 7 )]
+position = Vector2( 64, 56 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup8" instance=ExtResource( 7 )]
+position = Vector2( 128, 104 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup8" instance=ExtResource( 7 )]
+position = Vector2( 192, 152 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup8" instance=ExtResource( 7 )]
+position = Vector2( 256, 200 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup6" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1888.0
+margin_top = 96.0
+margin_right = 1888.0
+margin_bottom = 96.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup6" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 0, -24 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 48, -24 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin6" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 96, -24 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin7" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 0, -48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin8" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 48, -48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin9" parent="CoinGroup6" instance=ExtResource( 7 )]
+position = Vector2( 96, -48 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup3" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 776.0
+margin_top = 176.0
+margin_right = 776.0
+margin_bottom = 176.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup3" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup3" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup3" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup3" instance=ExtResource( 7 )]
+position = Vector2( 136, 24 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup3" instance=ExtResource( 7 )]
+position = Vector2( 176, 40 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin6" parent="CoinGroup3" instance=ExtResource( 7 )]
+position = Vector2( 216, 64 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup4" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1048.0
+margin_top = 416.0
+margin_right = 1048.0
+margin_bottom = 416.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup4" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup4" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup4" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup4" instance=ExtResource( 7 )]
+position = Vector2( 144, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup4" instance=ExtResource( 7 )]
+position = Vector2( 192, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CoinGroup5" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1256.0
+margin_top = 224.0
+margin_right = 1256.0
+margin_bottom = 224.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup5" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin4" parent="CoinGroup5" instance=ExtResource( 7 )]
+position = Vector2( -128, 64 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin5" parent="CoinGroup5" instance=ExtResource( 7 )]
+position = Vector2( -24, 128 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup5" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup5" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
 [node name="PlayerHUD" parent="." instance=ExtResource( 8 )]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]

@@ -2,12 +2,12 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.21
+Version: 0.2.22
 Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Stopped the player being able to move on death animation.
+Added more coins to the cave level.
 
 // --------------- NEW SCENES --------------- //
 
@@ -15,7 +15,7 @@ N/A
 
 // --------------- EDITED SCENES --------------- //
 
-N/A
+LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
@@ -23,4 +23,4 @@ N/A
 
 // --------------- EDITED SCRIPTS --------------- //
 
-Player.gd
+N/A
