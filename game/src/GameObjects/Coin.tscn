@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://du_assets/textures/coin/coin_3.png" type="Texture" id=1]
+[ext_resource path="res://du_assets/textures/coin/coin_2.png" type="Texture" id=2]
+[ext_resource path="res://du_assets/textures/coin/coin_1.png" type="Texture" id=3]
+[ext_resource path="res://du_assets/textures/coin/coin_6.png" type="Texture" id=4]
+[ext_resource path="res://du_assets/textures/coin/coin_4.png" type="Texture" id=5]
+[ext_resource path="res://du_assets/textures/coin/coin_5.png" type="Texture" id=6]
+[ext_resource path="res://du_assets/textures/coin/coin_7.png" type="Texture" id=7]
+[ext_resource path="res://du_assets/textures/coin/coin_8.png" type="Texture" id=8]
+[ext_resource path="res://src/GameObjects/Coin.gd" type="Script" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "coin_rotate",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 42.04, 65.0293 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "coin_collect"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -100 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.5, 6.0 ]
+}
+
+[node name="Coin" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "coin_rotate"
+frame = 1
+speed_scale = 1.5
+playing = true
+
+[node name="CoinHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoinHitbox"]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/coin_collect = SubResource( 3 )
+[connection signal="body_entered" from="CoinHitbox" to="." method="_on_CoinHitbox_body_entered"]
