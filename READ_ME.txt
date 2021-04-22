@@ -2,26 +2,25 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.2
+Version: 0.2.21
 Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added to the player HUD. There's now an oxygen bar that deplects as the player runs out of oxygen and a timer
-showing the remaining time in air.
+Stopped the player being able to move on death animation.
 
 // --------------- NEW SCENES --------------- //
 
-PlayerHUD.tcsn
+N/A
 
 // --------------- EDITED SCENES --------------- //
 
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-PlayerHUD.gd
+N/A
 
 // --------------- EDITED SCRIPTS --------------- //
 
-LevelOne.gd
+Player.gd

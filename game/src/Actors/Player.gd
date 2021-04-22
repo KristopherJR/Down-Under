@@ -12,6 +12,7 @@ func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	$AnimatedSprite.speed_scale = 1.0 #slow  down the animation
+	speed = Vector2.ZERO # stop the player moving
 	if death_anim_left == true: #if the last input was the player moving left
 		$AnimatedSprite.play("death")
 		$AnimatedSprite.set_flip_h(true) #play the death animation flipped to the left
