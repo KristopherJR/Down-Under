@@ -1,11 +1,21 @@
 extends Actor
 
 export var stomp_impulse: = 1000.0
+var death_anim_left: = false #determines if the player is facing left when they die
 
 func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse) #make player bounce when it kills enemy
 
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
+	$AnimatedSprite.speed_scale = 1.0 #slow  down the animation
+	if death_anim_left == true: #if the last input was the player moving left
+		$AnimatedSprite.play("death")
+		$AnimatedSprite.set_flip_h(true) #play the death animation flipped to the left
+	else:
+		$AnimatedSprite.play("death") #else play it to the right
+		
+	yield(get_tree().create_timer(0.75), "timeout") #wait for the death animation to finish
+	
 	queue_free() #kill character when an enemy touches player
 	get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
 	
@@ -44,18 +54,21 @@ func select_animation() -> void:
 	if Input.is_action_just_pressed("move_right"):
 		$AnimatedSprite.play("running_right")
 		$AnimatedSprite.set_flip_h(false)
-		
+		death_anim_left = false #death animation should play right if player dies
 	if Input.is_action_just_pressed("move_left"):
 		$AnimatedSprite.play("running_right")
 		$AnimatedSprite.set_flip_h(true)
+		death_anim_left = true #death animation should play left if player dies
 		
 	if Input.is_action_just_released("move_right"):
 		$AnimatedSprite.play("idle_right")
 		$AnimatedSprite.set_flip_h(false)
+		death_anim_left = false #death animation should play right if player dies
 		
 	if Input.is_action_just_released("move_left"):
 		$AnimatedSprite.play("idle_right")
 		$AnimatedSprite.set_flip_h(true)
+		death_anim_left = true #death animation should play left if player dies
 		
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
 	var out: = linear_velocity
