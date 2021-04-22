@@ -1,7 +1,6 @@
 extends Node2D
 
-var air_timer: = 0.0
-var gas_timer: = 300.0 #gas timer set to 5 minutes (300 seconds)
+var air_timer: = 300.0 #air timer set to 5 minutes (300 seconds)
 
 var coin_score: = 0
 
@@ -17,13 +16,26 @@ func connect_coins():
 func _on_coin_pickup():
 	coin_score += 1
 	print(coin_score)
-	$CanvasLayer2/CoinCounter/value_label.text = String(coin_score)
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	
+func _calculate_time_string() -> String:
+	var minutes = air_timer / 60
+	var seconds = fmod(air_timer, 60)
+	
+	var time_string:= "%02d:%02d" % [minutes,seconds] #formatting the String
+	
+	return  time_string
+
+func _calculate_oxygen_percentage():
+	var temp: = int((air_timer / 300) * 100)
+	$PlayerHUD/OxygenHUD/ProgressBar.value = temp
 
 func _physics_process(delta: float) -> void:
-	if air_timer < gas_timer:
-		air_timer += delta
-	#print(air_timer)
-	if air_timer >= gas_timer:
+	if air_timer > 0:
+		air_timer -= delta
+		$PlayerHUD/OxygenHUD/TimeLeftLabel.text = _calculate_time_string()
+		_calculate_oxygen_percentage()
+	if air_timer <= 0:
 		get_node("Player").queue_free() #kill the player when they run out of time
 		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
 

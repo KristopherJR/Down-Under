@@ -2,17 +2,17 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.1
+Version: 0.2.2
 Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Created a Coin scene. The coin is animated and has a 'collect' animation. Created a player HUD on Cave level with
-a coin counter. When the player picks up a coin the counter increases.
+Added to the player HUD. There's now an oxygen bar that deplects as the player runs out of oxygen and a timer
+showing the remaining time in air.
 
 // --------------- NEW SCENES --------------- //
 
-Coin.tcsn
+PlayerHUD.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
@@ -20,7 +20,7 @@ LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
-Coin.gd
+PlayerHUD.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
