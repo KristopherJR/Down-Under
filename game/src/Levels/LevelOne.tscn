@@ -1,12 +1,31 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GameObjects/Spikes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/LevelOne.gd" type="Script" id=5]
+[ext_resource path="res://du_assets/music/background_music.wav" type="AudioStream" id=6]
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
+
+[sub_resource type="Animation" id=1]
+resource_name = "music_fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -27.04, -80.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 88 )
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource( 5 )
@@ -128,3 +147,18 @@ position = Vector2( 336, 0 )
 
 [node name="Spikes12" parent="Spikepit2" instance=ExtResource( 4 )]
 position = Vector2( 352, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -27.04
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/music_fade_in = SubResource( 1 )
+
+[node name="MusicFadeArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicFadeArea"]
+position = Vector2( 24, 120 )
+shape = SubResource( 2 )
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]

@@ -1,15 +1,33 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/GameObjects/Campfire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=3]
 [ext_resource path="res://src/GameObjects/DoorHitbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://du_assets/music/camp_music.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Levels/CampLevel.gd" type="Script" id=6]
 [ext_resource path="res://du_assets/textures/sky_tile.png" type="Texture" id=15]
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="Animation" id=1]
+resource_name = "fade_music"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -27.04, -80.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18.6953, 46.0676 )
 
 [node name="CampLevel" type="Node2D"]
-script = SubResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 1040.0 ]
@@ -44,9 +62,6 @@ scale = Vector2( 0.165854, 0.165854 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 237.298, 1045.18 )
 
-[node name="AnimatedSprite" parent="Player" index="0"]
-frame = 3
-
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1920
 limit_bottom = 1000000000
@@ -54,5 +69,21 @@ limit_bottom = 1000000000
 [node name="DoorHitbox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1728.91, 1006.86 )
 scale = Vector2( 3, 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -27.04
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade_music = SubResource( 1 )
+
+[node name="MusicFadeArea" type="Area2D" parent="."]
+position = Vector2( 1742.37, 990.907 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicFadeArea"]
+position = Vector2( -20.2394, 16.2708 )
+shape = SubResource( 2 )
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="body_entered" from="MusicFadeArea" to="." method="_on_Area2D_body_entered"]
 
 [editable path="Player"]

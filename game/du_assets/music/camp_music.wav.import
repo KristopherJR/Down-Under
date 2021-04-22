@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/camp_music.wav-713e57d4046e2503d9571d32d266ffe9.sample"
+
+[deps]
+
+source_file="res://du_assets/music/camp_music.wav"
+dest_files=[ "res://.import/camp_music.wav-713e57d4046e2503d9571d32d266ffe9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
