@@ -1,13 +1,32 @@
 extends Node2D
 
-var air_timer: = 0.0
-var gas_timer: = 300.0 #gas timer set to 5 minutes (300 seconds)
+var max_air: = 120.0
+var air_timer: = max_air #air timer set to 2 minutes (120 seconds)
+var inverse_air_timer: = 0.0
+
+var full_heart: = ImageTexture.new()
+var full_heart_image: = Image.new()
+
+var half_heart: = ImageTexture.new()
+var half_heart_image: = Image.new()
+
+var empty_heart: = ImageTexture.new()
+var empty_heart_image: = Image.new()
 
 var coin_score: = 0
 
 func _ready() -> void:
 	$AudioStreamPlayer.play(0.0) #play the song at the start of the level
 	connect_coins()
+	
+	full_heart_image.load("res://du_assets/textures/health_icon/heart_full.png")
+	full_heart.create_from_image(full_heart_image)
+	
+	half_heart_image.load("res://du_assets/textures/health_icon/heart_half.png")
+	half_heart.create_from_image(half_heart_image)
+	
+	empty_heart_image.load("res://du_assets/textures/health_icon/heart_empty.png")
+	empty_heart.create_from_image(empty_heart_image)
 	
 func connect_coins():
 	var coins = get_tree().get_nodes_in_group("coins")
@@ -16,19 +35,58 @@ func connect_coins():
 		
 func _on_coin_pickup():
 	coin_score += 1
-	print(coin_score)
-	$CanvasLayer2/CoinCounter/value_label.text = String(coin_score)
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	
+func _calculate_time_string() -> String:
+	var minutes = air_timer / 60
+	var seconds = fmod(air_timer, 60)
+	
+	var time_string:= "%02d:%02d" % [minutes,seconds] #formatting the String
+	
+	return  time_string
 
+func _calculate_oxygen_percentage():
+	var percentage: = int((air_timer / max_air) * 100)
+	var inverse_percentage: = int((inverse_air_timer / max_air) * 100)
+	$PlayerHUD/OxygenHUD/ProgressBar.value = percentage
+	
+	var red_color_increment = 67 + (inverse_percentage * 1.83)
+	var green_color_decrement = (percentage * 2.5) + 25
+	
+	var new_color: = Color8(red_color_increment,green_color_decrement,19,255)
+	
+	get_node("PlayerHUD").shift_color(new_color)
+	
+func _update_heart_HUD():
+	if $Player.health == 3.0:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = full_heart
+	if $Player.health == 2.5:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = half_heart
+	if $Player.health == 2.0:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = empty_heart
+	if $Player.health == 1.5:
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = half_heart
+	if $Player.health == 1.0:
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = empty_heart
+	if $Player.health == 0.5:
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = half_heart
+	if $Player.health == 0.0:
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = empty_heart
+	
 func _physics_process(delta: float) -> void:
-	if air_timer < gas_timer:
-		air_timer += delta
-	#print(air_timer)
-	if air_timer >= gas_timer:
+	if air_timer > 0:
+		air_timer -= delta
+		inverse_air_timer += delta
+		$PlayerHUD/OxygenHUD/TimeLeftLabel.text = _calculate_time_string()
+		_calculate_oxygen_percentage()
+	if air_timer <= 0:
 		get_node("Player").queue_free() #kill the player when they run out of time
 		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
+		
+	_update_heart_HUD()
 
 func _on_AudioStreamPlayer_finished() -> void:
 	$AudioStreamPlayer.play(0.0) #loops the song when it's finished
 
-func _on_MusicFadeArea_body_entered(body: Node) -> void:
+func _on_MusicFadeArea_body_entered(_body: Node) -> void:
 	$AnimationPlayer.play("music_fade_in")

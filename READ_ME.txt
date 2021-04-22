@@ -2,26 +2,29 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.1
+Version: 0.2.25
 Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Created a Coin scene. The coin is animated and has a 'collect' animation. Created a player HUD on Cave level with
-a coin counter. When the player picks up a coin the counter increases.
+Added a health HUD to the player HUD. The player will now lose half a life when an enemy hits him. Upon reaching
+0 lives, the player dies.
 
 // --------------- NEW SCENES --------------- //
 
-Coin.tcsn
+Heart.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
+PlayerHud.tcsn
 LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
-Coin.gd
+Heart.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
+PlayerHud.gd
 LevelOne.gd
+
