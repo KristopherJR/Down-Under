@@ -1,0 +1,14 @@
+{
+	"Red Gem": {
+		"ItemCategory": "Resource",
+		"StackSize": 5,
+		"Description": "A red gem that can be collected as treasure."	
+		},
+	"Health":{
+		"ItemCategory": "Consumable",
+		"AddHealth": 1,
+		"StackSize": 2,
+		"Description": "It grants one extra full health when consumed."
+		}
+
+}

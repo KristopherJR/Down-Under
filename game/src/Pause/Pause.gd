@@ -25,13 +25,6 @@ func _on_Fullscreen_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
 
 
-
-func _on_Options_pressed():
-	pass
-
-
-
-
 func _on_MainMenu_pressed():
 	get_tree().change_scene('res://src/Screens/MainMenu.tscn')
 	get_tree().paused = false

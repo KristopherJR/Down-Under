@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Items/Item.gd" type="Script" id=1]
+[ext_resource path="res://du_assets/textures/item_icons/gems-32-blackout_01.png" type="Texture" id=2]
+
+[node name="Item" type="Node2D"]
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 60, 60 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 53.881
+margin_top = 44.1409
+margin_right = 61.881
+margin_bottom = 58.1409
+rect_scale = Vector2( 3, 3 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}

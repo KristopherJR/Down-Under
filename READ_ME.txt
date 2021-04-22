@@ -2,28 +2,48 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Abdul-Roqeeb Oloruntele
 
-Version: 0.1.8
-Date: 17-04-2021
+Version: 0.1.9
+Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-linked the main menu button. Made a save load function but it is still not working as intended (it's not working at all)
+Made an inventory. Made items which goes into the inventory when collected and can be stacked to a specified number. 
+Made an popup explaining controls at the start of the game.
 
 // --------------- NEW SCENES --------------- //
-
-SaveGame.tscn
-SaveInterface.tscn
+ControlInfo.tscn
+Inventory.tscn
+InventoryScreen.tscn
+ItemDropBlueGem.tscn
+ItemDropFullHealth.tscn
+ItemDropHalfHealth.tscn
+ItemDropOrangeGem.tscn
+ItemDropPinkGem.tscn
+ItemDropRedGem.tscn
+Item.tscn
+ItemDrop.tscn
 
 // --------------- EDITED SCENES --------------- //
 
-N/A
+CampLevel.tscn
+
 
 // --------------- NEW SCRIPTS --------------- //
 
-SaveGame.gd
-SaveDictionary.gd
-SaveInterface.gd
+ControlInfo.gd
+Inventory.gd
+InventoryInterface.gd
+PlayerInventory.gd
+Slot.gd
+ItemDropBlueGem.gd
+ItemDropFullHealth.gd
+ItemDropHalfHealth.gd
+ItemDropOrangeGem.gd
+ItemDropPinkGem.gd
+ItemDropRedGem.gd
+Item.gd
+ItemDrop.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-Pause.gd
+N/A

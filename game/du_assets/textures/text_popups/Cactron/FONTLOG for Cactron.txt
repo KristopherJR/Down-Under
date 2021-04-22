@@ -1,0 +1,26 @@
+FONTLOG for "Cactron", a font family
+
+This FONTLOG will be used to describe the font family "Cactron" as well to record its future changes and additions.
+
+Basic Font Information ------
+
+Cactron is a Unicode typeface family based on the Latin script, with enough diacritics and special letters to support English, Spanish, Portuguese, French, German and Italian. It has no ligatures.
+
+This project started in April 2020, with its initial release in August of the same year. The font was based on a logo released by the author on September, 2019.
+
+If you would like to add or make changes to this family, be sure to write your contributions in the Change Log:
+
+Change Log ------
+
+August 2020 (Nacahua) Cactron v. 1.0
+Initial release
+
+Acknowledgements ------
+
+If you make modifications, be sure to add yourself and a short description of your contibution in this list as well as your email and/or web-adress! This is in alphabetical order.
+
+Nacahua
+nacahua.id@gmail.com
+behance.net/nacahua
+(Initial release)
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gems-32-blackout_01.png-c9030ba6586619211a7fcdc2b4844115.stex"
+path="res://.import/info_box_exclamation.png-5a8bc392761e27698383678db2a3ad58.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/gem_icons/gems-32-blackout_01.png"
-dest_files=[ "res://.import/gems-32-blackout_01.png-c9030ba6586619211a7fcdc2b4844115.stex" ]
+source_file="res://du_assets/textures/text_popups/info_box_exclamation.png"
+dest_files=[ "res://.import/info_box_exclamation.png-5a8bc392761e27698383678db2a3ad58.stex" ]
 
 [params]
 

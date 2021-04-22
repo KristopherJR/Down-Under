@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://src/GameObjects/campfire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -29,6 +29,16 @@
 [ext_resource path="res://du_assets/textures/tiles/trees_path_left.png" type="Texture" id=27]
 [ext_resource path="res://du_assets/textures/tiles/grass_path_1.png" type="Texture" id=28]
 [ext_resource path="res://du_assets/textures/tiles/camp.png" type="Texture" id=29]
+[ext_resource path="res://src/Inventory/InventoryScreen.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropFullHealth.tscn" type="PackedScene" id=31]
+[ext_resource path="res://src/InfoTextBox/ControlInfo.tscn" type="PackedScene" id=32]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropOrangeGem.tscn" type="PackedScene" id=33]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropRedGem.tscn" type="PackedScene" id=34]
+[ext_resource path="res://du_assets/textures/text_popups/info_box_exclamation.png" type="Texture" id=35]
+[ext_resource path="res://du_assets/textures/text_popups/info_sign.png" type="Texture" id=36]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropBlueGem.tscn" type="PackedScene" id=37]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropPinkGem.tscn" type="PackedScene" id=38]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropHalfHealth.tscn" type="PackedScene" id=39]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -742,6 +752,22 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 32, 0, 32 )
 } ]
 29/z_index = 0
 
+[sub_resource type="Animation" id=33]
+resource_name = "Info"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 617, 983.213 ), Vector2( 617, 975 ), Vector2( 617, 983.213 ) ]
+}
+
 [node name="CampLevel" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
@@ -766,7 +792,7 @@ __meta__ = {
 tile_set = SubResource( 32 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 8
-collision_mask = 0
+collision_mask = 16
 format = 1
 tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 3539011, 25, 0, 3539016, 25, 0, 3539021, 24, 0, 3670098, 19, 0, 3866624, 29, 0, 4128815, 14, 0, 4128860, 14, 0, 4194321, 15, 0, 4194326, 18, 0, 4194356, 18, 0, 4194361, 15, 0, 4194391, 18, 0, 4456448, 23, 0, 4456449, 23, 0, 4456451, 23, 0, 4456453, 23, 0, 4456455, 23, 0, 4456457, 23, 0, 4456459, 23, 0, 4456461, 23, 0, 4456463, 23, 0, 4456465, 23, 0, 4456467, 23, 0, 4456469, 23, 0, 4456471, 23, 0, 4456473, 23, 0, 4456475, 23, 0, 4456476, 23, 0, 4456478, 23, 0, 4456480, 23, 0, 4456482, 23, 0, 4456484, 23, 0, 4456486, 23, 0, 4456488, 23, 0, 4456490, 23, 0, 4456492, 23, 0, 4456494, 23, 0, 4456496, 23, 0, 4456498, 23, 0, 4456500, 23, 0, 4456502, 23, 0, 4456504, 23, 0, 4456506, 23, 0, 4456508, 23, 0, 4456510, 23, 0, 4456512, 23, 0, 4456514, 23, 0, 4456516, 23, 0, 4456518, 23, 0, 4456520, 23, 0, 4456522, 23, 0, 4456524, 23, 0, 4456526, 23, 0, 4456528, 23, 0, 4456530, 23, 0, 4456532, 23, 0, 4456534, 23, 0, 4456536, 23, 0, 4456538, 23, 0, 4456540, 23, 0, 4456542, 23, 0, 4456544, 23, 0, 4456546, 23, 0, 4456548, 23, 0, 4456550, 23, 0, 4456552, 23, 0, 4456554, 23, 0, 4456556, 23, 0, 4456558, 23, 0, 4456560, 23, 0, 4456562, 23, 0, 4456564, 23, 0, 4456566, 23, 0, 4587520, 22, 0, 4587522, 22, 0, 4587524, 22, 0, 4587526, 22, 0, 4587528, 22, 0, 4587530, 22, 0, 4587532, 22, 0, 4587534, 22, 0, 4587536, 22, 0, 4587538, 22, 0, 4587540, 22, 0, 4587542, 22, 0, 4587544, 22, 0, 4587546, 22, 0, 4587547, 22, 0, 4587549, 22, 0, 4587551, 22, 0, 4587553, 22, 0, 4587555, 22, 0, 4587557, 22, 0, 4587559, 22, 0, 4587561, 22, 0, 4587563, 22, 0, 4587565, 22, 0, 4587567, 22, 0, 4587569, 22, 0, 4587571, 22, 0, 4587573, 22, 0, 4587575, 22, 0, 4587577, 22, 0, 4587579, 22, 0, 4587581, 22, 0, 4587583, 22, 0, 4587585, 22, 0, 4587587, 22, 0, 4587589, 22, 0, 4587591, 22, 0, 4587593, 22, 0, 4587595, 22, 0, 4587597, 22, 0, 4587599, 22, 0, 4587601, 22, 0, 4587602, 22, 0, 4587604, 22, 0, 4587606, 22, 0, 4587608, 22, 0, 4587610, 22, 0, 4587612, 22, 0, 4587614, 22, 0, 4587616, 22, 0, 4587618, 22, 0, 4587620, 22, 0, 4587622, 22, 0, 4587624, 22, 0, 4587626, 22, 0, 4587628, 22, 0, 4587630, 22, 0, 4587632, 22, 0, 4587634, 22, 0, 4587636, 22, 0, 4587638, 22, 0 )
 
@@ -775,11 +801,50 @@ position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
 frame = 1
 
+[node name="Controls Info" type="TextureButton" parent="."]
+margin_left = 617.0
+margin_top = 983.213
+margin_right = 657.0
+margin_bottom = 1043.22
+texture_normal = ExtResource( 35 )
+texture_pressed = ExtResource( 36 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Controls Info"]
+autoplay = "Info"
+anims/Info = SubResource( 33 )
+
+[node name="PopupTextBox" parent="." instance=ExtResource( 32 )]
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 458.085, 623.759 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1920
 limit_bottom = 1000000000
+
+[node name="InventoryScreen" parent="." instance=ExtResource( 30 )]
+
+[node name="ItemDropRedG" parent="." instance=ExtResource( 34 )]
+position = Vector2( 1278.4, 329.41 )
+
+[node name="ItemDropBlueG" parent="." instance=ExtResource( 37 )]
+position = Vector2( 629.091, 336.546 )
+
+[node name="ItemDropPinkG" parent="." instance=ExtResource( 38 )]
+position = Vector2( 259.247, 479.25 )
+
+[node name="ItemDropOrangeG" parent="." instance=ExtResource( 33 )]
+position = Vector2( 988.231, 432.871 )
+
+[node name="ItemDropFHealth" parent="." instance=ExtResource( 31 )]
+position = Vector2( 592.225, 469.737 )
+
+[node name="ItemDropHHealth" parent="." instance=ExtResource( 39 )]
+position = Vector2( 384.114, 581.522 )
+[connection signal="pressed" from="Controls Info" to="PopupTextBox" method="_on_Controls_Info_pressed"]
 
 [editable path="Player"]
