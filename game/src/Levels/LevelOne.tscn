@@ -7,7 +7,7 @@
 [ext_resource path="res://src/Levels/LevelOne.gd" type="Script" id=5]
 [ext_resource path="res://du_assets/music/background_music.wav" type="AudioStream" id=6]
 [ext_resource path="res://src/GameObjects/Coin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/UI/Player HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/UI/PlayerHUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
@@ -162,6 +162,8 @@ anims/music_fade_in = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicFadeArea"]
 position = Vector2( 24, 120 )
 shape = SubResource( 2 )
+
+[node name="PlayerHUD" parent="." instance=ExtResource( 8 )]
 
 [node name="CoinGroup" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -647,7 +649,5 @@ scale = Vector2( 0.15, 0.15 )
 [node name="Coin3" parent="CoinGroup5" instance=ExtResource( 7 )]
 position = Vector2( 96, 0 )
 scale = Vector2( 0.15, 0.15 )
-
-[node name="PlayerHUD" parent="." instance=ExtResource( 8 )]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]

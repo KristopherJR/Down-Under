@@ -1,19 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://du_assets/font/DownUnderFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://du_assets/textures/coin/coin_1.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/PlayerHUD.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 use_filter = true
 font_data = ExtResource( 1 )
@@ -22,7 +23,26 @@ font_data = ExtResource( 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
+[sub_resource type="Animation" id=5]
+resource_name = "New Anim"
+
+[sub_resource type="Animation" id=6]
+resource_name = "oxygen_bar_colour"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ProgressBar:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.262745, 0.984314, 0.0745098, 1 ), Color( 0.984314, 0.117647, 0.0745098, 1 ) ]
+}
+
 [node name="PlayerHUD" type="CanvasLayer"]
+script = ExtResource( 3 )
 
 [node name="CoinHUD" type="HBoxContainer" parent="."]
 margin_left = 25.0
@@ -92,7 +112,7 @@ __meta__ = {
 [node name="RemainingLabel" type="Label" parent="OxygenHUD"]
 margin_right = 446.0
 margin_bottom = 21.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "REMAINING OXYGEN"
 align = 1
 __meta__ = {
@@ -105,8 +125,8 @@ margin_right = 446.0
 margin_bottom = 62.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.262745, 0.984314, 0.0745098, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.980392, 0.0980392, 0.0745098, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 value = 100.0
 rounded = true
@@ -122,3 +142,7 @@ custom_fonts/font = SubResource( 4 )
 text = "00:00"
 align = 1
 valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OxygenHUD"]
+"anims/New Anim" = SubResource( 5 )
+anims/oxygen_bar_colour = SubResource( 6 )

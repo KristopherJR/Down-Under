@@ -1,6 +1,8 @@
 extends Node2D
 
-var air_timer: = 300.0 #air timer set to 5 minutes (300 seconds)
+var max_air: = 12.0
+var air_timer: = max_air #air timer set to 2 minutes (120 seconds)
+var inverse_air_timer: = 0.0
 
 var coin_score: = 0
 
@@ -15,7 +17,6 @@ func connect_coins():
 		
 func _on_coin_pickup():
 	coin_score += 1
-	print(coin_score)
 	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
 	
 func _calculate_time_string() -> String:
@@ -27,12 +28,22 @@ func _calculate_time_string() -> String:
 	return  time_string
 
 func _calculate_oxygen_percentage():
-	var temp: = int((air_timer / 300) * 100)
-	$PlayerHUD/OxygenHUD/ProgressBar.value = temp
-
+	var percentage: = int((air_timer / max_air) * 100)
+	var inverse_percentage: = int((inverse_air_timer / max_air) * 100)
+	$PlayerHUD/OxygenHUD/ProgressBar.value = percentage
+	
+	var red_color_increment = 67 + (inverse_percentage * 1.83)
+	var green_color_decrement = (percentage * 2.5) + 25
+	
+	var new_color: = Color8(red_color_increment,green_color_decrement,19,255)
+	
+	get_node("PlayerHUD").shift_color(new_color)
+	
+	
 func _physics_process(delta: float) -> void:
 	if air_timer > 0:
 		air_timer -= delta
+		inverse_air_timer += delta
 		$PlayerHUD/OxygenHUD/TimeLeftLabel.text = _calculate_time_string()
 		_calculate_oxygen_percentage()
 	if air_timer <= 0:
@@ -42,5 +53,5 @@ func _physics_process(delta: float) -> void:
 func _on_AudioStreamPlayer_finished() -> void:
 	$AudioStreamPlayer.play(0.0) #loops the song when it's finished
 
-func _on_MusicFadeArea_body_entered(body: Node) -> void:
+func _on_MusicFadeArea_body_entered(_body: Node) -> void:
 	$AnimationPlayer.play("music_fade_in")
