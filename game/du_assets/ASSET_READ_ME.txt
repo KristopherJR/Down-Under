@@ -42,7 +42,8 @@ gain_life: tbd
 meme1: "Retro_8-Bit_Game-Digitalized_Voice_Scream_01" from "8bitretrogamesfx_windows"
 meme2: "Retro_8-Bit_Game-Digitalized_Voice_Scream_02" from "8bitretrogamesfx_windows"
 
+---------- FONT ----------
 
-
+DownUnderFont.tff: https://www.dafont.com/aldo-the-apache.font?text=Down+Under
 
 

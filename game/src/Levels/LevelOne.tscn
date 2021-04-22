@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://src/GameObjects/Spikes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/LevelOne.gd" type="Script" id=5]
 [ext_resource path="res://du_assets/music/background_music.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/GameObjects/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://du_assets/font/DownUnderFont.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://du_assets/textures/coin/coin_1.png" type="Texture" id=9]
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
@@ -26,6 +29,11 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 88 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource( 5 )
@@ -160,5 +168,84 @@ anims/music_fade_in = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MusicFadeArea"]
 position = Vector2( 24, 120 )
 shape = SubResource( 2 )
+
+[node name="CoinGroup" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 456.0
+margin_top = 144.0
+margin_right = 456.0
+margin_bottom = 144.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coin" parent="CoinGroup" instance=ExtResource( 7 )]
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin2" parent="CoinGroup" instance=ExtResource( 7 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Coin3" parent="CoinGroup" instance=ExtResource( 7 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
+margin_left = 30.0
+margin_top = 75.0
+margin_right = 390.0
+margin_bottom = 1005.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinIcon" type="TextureRect" parent="CanvasLayer2/HBoxContainer"]
+margin_right = 140.0
+margin_bottom = 930.0
+texture = ExtResource( 9 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinCounter" type="Control" parent="CanvasLayer2"]
+margin_left = 125.0
+margin_top = 100.0
+margin_right = 125.0
+margin_bottom = 980.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x_label" type="Label" parent="CanvasLayer2/CoinCounter"]
+margin_left = -42.0
+margin_top = 8.0
+margin_right = -2.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 3 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value_label" type="Label" parent="CanvasLayer2/CoinCounter"]
+margin_left = -10.0
+margin_top = -24.0
+margin_right = 30.0
+margin_bottom = 17.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]

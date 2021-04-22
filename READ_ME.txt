@@ -2,27 +2,26 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.1.93
-Date: 21-04-2021
+Version: 0.2.1
+Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added music to all levels/screens. The music also fades in and out when changing zones for a smoother transition.
-Added a death animation for the player which will play when an enemy kills him.
+Created a Coin scene. The coin is animated and has a 'collect' animation. Created a player HUD on Cave level with
+a coin counter. When the player picks up a coin the counter increases.
 
 // --------------- NEW SCENES --------------- //
 
-GameOverScreen.tcsn
+Coin.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
-N/A
+LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
-GameOverScreen.gd
+Coin.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-CampLevel.gd
 LevelOne.gd
