@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://du_assets/font/DownUnderFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://du_assets/textures/coin/coin_1.png" type="Texture" id=2]
 [ext_resource path="res://src/UI/PlayerHUD.gd" type="Script" id=3]
+[ext_resource path="res://du_assets/textures/health_icon/heart_full.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -22,24 +23,6 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=4]
 use_filter = true
 font_data = ExtResource( 1 )
-
-[sub_resource type="Animation" id=5]
-resource_name = "New Anim"
-
-[sub_resource type="Animation" id=6]
-resource_name = "oxygen_bar_colour"
-tracks/0/type = "value"
-tracks/0/path = NodePath("ProgressBar:custom_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.262745, 0.984314, 0.0745098, 1 ), Color( 0.984314, 0.117647, 0.0745098, 1 ) ]
-}
 
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -143,6 +126,34 @@ text = "00:00"
 align = 1
 valign = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="OxygenHUD"]
-"anims/New Anim" = SubResource( 5 )
-anims/oxygen_bar_colour = SubResource( 6 )
+[node name="HealthHUD" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -168.0
+margin_top = 40.0
+margin_right = -90.0
+margin_bottom = 78.0
+grow_horizontal = 0
+rect_scale = Vector2( 1.5, 1.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartIcon1" type="TextureRect" parent="HealthHUD"]
+margin_right = 40.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+
+[node name="HeartIcon2" type="TextureRect" parent="HealthHUD"]
+margin_left = 44.0
+margin_right = 84.0
+margin_bottom = 38.0
+texture = ExtResource( 4 )
+
+[node name="HeartIcon3" type="TextureRect" parent="HealthHUD"]
+margin_left = 88.0
+margin_right = 128.0
+margin_bottom = 38.0
+texture = ExtResource( 4 )

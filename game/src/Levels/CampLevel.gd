@@ -9,5 +9,5 @@ func _on_AudioStreamPlayer_finished() -> void:
 func _fade_music() -> void:
 	$AnimationPlayer.play("fade_music")
 	
-func _on_Area2D_body_entered(body: Node) -> void:
+func _on_Area2D_body_entered(_body: Node) -> void:
 	_fade_music()

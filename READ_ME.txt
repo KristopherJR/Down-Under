@@ -2,26 +2,29 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.24
+Version: 0.2.25
 Date: 22-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added a colour gradient shifter for the percentage bar. As the bar moves from full to 0%, the colour changes
-from green to red.
+Added a health HUD to the player HUD. The player will now lose half a life when an enemy hits him. Upon reaching
+0 lives, the player dies.
 
 // --------------- NEW SCENES --------------- //
 
-N/A
+Heart.tcsn
 
 // --------------- EDITED SCENES --------------- //
 
-N/A
+PlayerHud.tcsn
+LevelOne.tcsn
 
 // --------------- NEW SCRIPTS --------------- //
 
-N/A
+Heart.gd
 
 // --------------- EDITED SCRIPTS --------------- //
 
-Coin.gd
+PlayerHud.gd
+LevelOne.gd
+

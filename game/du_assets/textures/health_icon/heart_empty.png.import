@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart_half.png-f39bbca4bbbe5d35361430d8c16b217e.stex"
+path="res://.import/heart_empty.png-6b67418497b8cdd7020540b8b009a31f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://du_assets/textures/health_icon/heart_half.png"
-dest_files=[ "res://.import/heart_half.png-f39bbca4bbbe5d35361430d8c16b217e.stex" ]
+source_file="res://du_assets/textures/health_icon/heart_empty.png"
+dest_files=[ "res://.import/heart_empty.png-6b67418497b8cdd7020540b8b009a31f.stex" ]
 
 [params]
 

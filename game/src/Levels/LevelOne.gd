@@ -1,14 +1,32 @@
 extends Node2D
 
-var max_air: = 12.0
+var max_air: = 120.0
 var air_timer: = max_air #air timer set to 2 minutes (120 seconds)
 var inverse_air_timer: = 0.0
+
+var full_heart: = ImageTexture.new()
+var full_heart_image: = Image.new()
+
+var half_heart: = ImageTexture.new()
+var half_heart_image: = Image.new()
+
+var empty_heart: = ImageTexture.new()
+var empty_heart_image: = Image.new()
 
 var coin_score: = 0
 
 func _ready() -> void:
 	$AudioStreamPlayer.play(0.0) #play the song at the start of the level
 	connect_coins()
+	
+	full_heart_image.load("res://du_assets/textures/health_icon/heart_full.png")
+	full_heart.create_from_image(full_heart_image)
+	
+	half_heart_image.load("res://du_assets/textures/health_icon/heart_half.png")
+	half_heart.create_from_image(half_heart_image)
+	
+	empty_heart_image.load("res://du_assets/textures/health_icon/heart_empty.png")
+	empty_heart.create_from_image(empty_heart_image)
 	
 func connect_coins():
 	var coins = get_tree().get_nodes_in_group("coins")
@@ -39,6 +57,21 @@ func _calculate_oxygen_percentage():
 	
 	get_node("PlayerHUD").shift_color(new_color)
 	
+func _update_heart_HUD():
+	if $Player.health == 3.0:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = full_heart
+	if $Player.health == 2.5:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = half_heart
+	if $Player.health == 2.0:
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = empty_heart
+	if $Player.health == 1.5:
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = half_heart
+	if $Player.health == 1.0:
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = empty_heart
+	if $Player.health == 0.5:
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = half_heart
+	if $Player.health == 0.0:
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = empty_heart
 	
 func _physics_process(delta: float) -> void:
 	if air_timer > 0:
@@ -49,6 +82,8 @@ func _physics_process(delta: float) -> void:
 	if air_timer <= 0:
 		get_node("Player").queue_free() #kill the player when they run out of time
 		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
+		
+	_update_heart_HUD()
 
 func _on_AudioStreamPlayer_finished() -> void:
 	$AudioStreamPlayer.play(0.0) #loops the song when it's finished

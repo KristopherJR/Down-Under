@@ -2,36 +2,38 @@ extends Actor
 
 export var stomp_impulse: = 1000.0
 var death_anim_left: = false #determines if the player is facing left when they die
+var health: = 3.0
 
 func _ready() -> void:
 	$AnimatedSprite.play("idle_right")
-	
 	
 func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse) #make player bounce when it kills enemy
 
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
-	$AnimatedSprite.speed_scale = 1.0 #slow  down the animation
-	speed = Vector2.ZERO # stop the player moving
-	if death_anim_left == true: #if the last input was the player moving left
-		$AnimatedSprite.play("death")
-		$AnimatedSprite.set_flip_h(true) #play the death animation flipped to the left
-	else:
-		$AnimatedSprite.play("death") #else play it to the right
+	health -= 0.5
+	
+	if health < 0:
+		$AnimatedSprite.speed_scale = 1.0 #slow  down the animation
+		speed = Vector2.ZERO # stop the player moving
+		if death_anim_left == true: #if the last input was the player moving left
+			$AnimatedSprite.play("death")
+			$AnimatedSprite.set_flip_h(true) #play the death animation flipped to the left
+		else:
+			$AnimatedSprite.play("death") #else play it to the right
 		
-	yield(get_tree().create_timer(0.75), "timeout") #wait for the death animation to finish
-	
-	queue_free() #kill character when an enemy touches player
-	get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
-	
-	
+		yield(get_tree().create_timer(0.75), "timeout") #wait for the death animation to finish
+		
+		queue_free() #kill character when an enemy touches player
+		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
 
 func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
-	select_animation()
+	if health > 0:
+		select_animation()
 		
 func get_direction() -> Vector2:
 	return Vector2(
