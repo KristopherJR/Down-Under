@@ -59,10 +59,10 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 1
+frame = 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 237.298, 1045.18 )
+position = Vector2( 1621.3, 1050.18 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1920

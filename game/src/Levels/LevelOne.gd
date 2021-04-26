@@ -1,5 +1,7 @@
 extends Node2D
 
+signal cave_exited(spawn_at)
+
 var max_air: = 150.0
 var air_timer: = max_air #air timer set to 2:30 minutes (150 seconds)
 var inverse_air_timer: = 0.0
@@ -101,3 +103,4 @@ func _on_AudioStreamPlayer_finished() -> void:
 
 func _on_MusicFadeArea_body_entered(_body: Node) -> void:
 	$AnimationPlayer.play("music_fade_in")
+	GlobalLevelData.spawn_location = Vector2(1621.298,1050.185)

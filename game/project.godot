@@ -26,6 +26,7 @@ run/main_scene="res://src/Screens/MainMenu.tscn"
 [autoload]
 
 Pause="*res://src/Pause/Pause.tscn"
+GlobalLevelData="*res://src/Levels/GlobalLevelData.gd"
 
 [display]
 
