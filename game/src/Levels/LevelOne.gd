@@ -15,7 +15,6 @@ var half_heart_image: = Image.new()
 var empty_heart: = ImageTexture.new()
 var empty_heart_image: = Image.new()
 
-var coin_score: = 0
 
 func _ready() -> void:
 	$AudioStreamPlayer.play(0.0) #play the song at the start of the level
@@ -31,14 +30,17 @@ func _ready() -> void:
 	empty_heart_image.load("res://du_assets/textures/health_icon/heart_empty.png")
 	empty_heart.create_from_image(empty_heart_image)
 	
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
+	
 func _connect_coins():
 	var coins = get_tree().get_nodes_in_group("coins")
 	for coin in coins:
 		coin.connect("picked_up", self, "_on_coin_pickup")
 		
 func _on_coin_pickup():
-	coin_score += 1
-	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	GlobalLevelData.coin_total += 1
+	
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
 	
 func _connect_ores():
 	var ores = get_tree().get_nodes_in_group("ores")
@@ -46,8 +48,8 @@ func _connect_ores():
 		ore.connect("ore_break", self, "_on_ore_break")	
 	
 func _on_ore_break():
-	coin_score += 10
-	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	GlobalLevelData.coin_total += 10
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
 	$OreBreakEffect.play(0.0)
 	
 func _calculate_time_string() -> String:

@@ -2,12 +2,12 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.3.4
+Version: 0.3.5
 Date: 26-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added 2 more buttons to the end game screen.
+Made coin state save when you zone out of the cave and zone back in. Updated the version label in main menu.
 
 // --------------- NEW SCENES --------------- //
 
