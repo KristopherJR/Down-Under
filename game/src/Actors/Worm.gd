@@ -21,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
 	select_animation(_velocity)
 
-
 func select_animation(
 		_velocity: Vector2
 	) -> void:

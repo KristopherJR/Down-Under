@@ -1,7 +1,7 @@
 extends Node2D
 
-var max_air: = 120.0
-var air_timer: = max_air #air timer set to 2 minutes (120 seconds)
+var max_air: = 150.0
+var air_timer: = max_air #air timer set to 2:30 minutes (150 seconds)
 var inverse_air_timer: = 0.0
 
 var full_heart: = ImageTexture.new()
@@ -17,7 +17,8 @@ var coin_score: = 0
 
 func _ready() -> void:
 	$AudioStreamPlayer.play(0.0) #play the song at the start of the level
-	connect_coins()
+	_connect_coins()
+	_connect_ores()
 	
 	full_heart_image.load("res://du_assets/textures/health_icon/heart_full.png")
 	full_heart.create_from_image(full_heart_image)
@@ -28,7 +29,7 @@ func _ready() -> void:
 	empty_heart_image.load("res://du_assets/textures/health_icon/heart_empty.png")
 	empty_heart.create_from_image(empty_heart_image)
 	
-func connect_coins():
+func _connect_coins():
 	var coins = get_tree().get_nodes_in_group("coins")
 	for coin in coins:
 		coin.connect("picked_up", self, "_on_coin_pickup")
@@ -36,6 +37,16 @@ func connect_coins():
 func _on_coin_pickup():
 	coin_score += 1
 	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	
+func _connect_ores():
+	var ores = get_tree().get_nodes_in_group("ores")
+	for ore in ores:
+		ore.connect("ore_break", self, "_on_ore_break")	
+	
+func _on_ore_break():
+	coin_score += 10
+	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(coin_score)
+	$OreBreakEffect.play(0.0)
 	
 func _calculate_time_string() -> String:
 	var minutes = air_timer / 60

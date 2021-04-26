@@ -8,14 +8,19 @@ extends StaticBody2D
 enum {INRANGE, NOTRANGE}	# initialize the states for the Ore
 var state = NOTRANGE		# initialize initial state for the Ore
 
+signal ore_break()
+
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _ready() -> void:
+	add_to_group("ores")
 
 func _input(event):
 	if event.is_action_pressed("mining"):
 		if state == INRANGE:
 			# Insert here features that are wanted after mining
+		
+			emit_signal("ore_break")
+			
 			queue_free() # delete the Ore node
 
 func _on_MinableMaterial_body_entered(body):

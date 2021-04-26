@@ -2,29 +2,27 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.2.25
-Date: 22-04-2021
+Version: 0.3.1
+Date: 26-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added a health HUD to the player HUD. The player will now lose half a life when an enemy hits him. Upon reaching
-0 lives, the player dies.
+Added the Nodes to the world. Added a sound effect when a node breaks. Added a sound effect when the player loses a life. Fixed a bug where the player didnt
+die when lives reached 0. Stopped the player from falling off the world when exiting the cave. Increased the cave oxygen timer to 2:30 from 2:00.
 
 // --------------- NEW SCENES --------------- //
 
-Heart.tcsn
+N/A
 
 // --------------- EDITED SCENES --------------- //
 
-PlayerHud.tcsn
-LevelOne.tcsn
+N/A
 
 // --------------- NEW SCRIPTS --------------- //
 
-Heart.gd
+N/A
 
 // --------------- EDITED SCRIPTS --------------- //
 
-PlayerHud.gd
-LevelOne.gd
+N/A
 

@@ -59,7 +59,7 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 0
+frame = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 237.298, 1045.18 )
@@ -87,7 +87,7 @@ position = Vector2( -20.2394, 16.2708 )
 shape = SubResource( 2 )
 
 [node name="Ore" parent="." instance=ExtResource( 7 )]
-position = Vector2( 342.973, 1035.77 )
+position = Vector2( 511.25, 1636.54 )
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_Area2D_body_entered"]
 
