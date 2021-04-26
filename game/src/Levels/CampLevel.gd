@@ -8,6 +8,7 @@ func _ready() -> void:
 	spawn_location = GlobalLevelData.spawn_location
 	
 	$Player.position = spawn_location
+	$Player/AnimatedSprite.set_flip_h(GlobalLevelData.temp_flip)
 	
 	GlobalLevelData.spawn_location = Vector2(235.298,1043.18)
 

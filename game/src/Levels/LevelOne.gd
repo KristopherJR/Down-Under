@@ -104,3 +104,4 @@ func _on_AudioStreamPlayer_finished() -> void:
 func _on_MusicFadeArea_body_entered(_body: Node) -> void:
 	$AnimationPlayer.play("music_fade_in")
 	GlobalLevelData.spawn_location = Vector2(1621.298,1050.185)
+	GlobalLevelData.temp_flip = true

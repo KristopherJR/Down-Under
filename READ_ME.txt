@@ -2,12 +2,12 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.3.2
+Version: 0.3.3
 Date: 26-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Made the player spawn outside the cave entrance when exiting the cave.
+Made the player face the right way when exiting the cave.
 
 // --------------- NEW SCENES --------------- //
 
