@@ -3,6 +3,7 @@ extends Actor
 export var stomp_impulse: = 1000.0
 var death_anim_left: = false #determines if the player is facing left when they die
 var health: = 3.0
+var isMining = false
 
 func _ready() -> void:
 	$AnimatedSprite.play("idle_right")
@@ -75,6 +76,12 @@ func select_animation() -> void:
 		$AnimatedSprite.play("idle_right")
 		$AnimatedSprite.set_flip_h(true)
 		death_anim_left = true #death animation should play left if player dies
+		
+	if Input.is_action_just_pressed("mining"):
+		isMining = true
+		
+	if Input.is_action_just_released("mining"):
+		isMining = false
 		
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
 	var out: = linear_velocity

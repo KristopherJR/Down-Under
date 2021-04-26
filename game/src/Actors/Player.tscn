@@ -28,9 +28,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "running_left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
@@ -38,19 +38,19 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "running_left",
+"name": "running_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "running_right",
 "speed": 5.0
 } ]
 
@@ -60,7 +60,9 @@ extents = Vector2( 9, 16.8512 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 9.72088, 17.4718 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 100, 100 )
@@ -91,7 +93,9 @@ smoothing_speed = 7.0
 drag_margin_left = 0.0
 drag_margin_right = 0.0
 
-[node name="EnemyDetector" type="Area2D" parent="."]
+[node name="EnemyDetector" type="Area2D" parent="." groups=[
+"Player",
+]]
 modulate = Color( 0.278431, 0.164706, 0.94902, 1 )
 monitorable = false
 collision_layer = 0

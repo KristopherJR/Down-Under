@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Mining/Ore.gd" type="Script" id=1]
+[ext_resource path="res://du_assets/textures/gem_icons/gems-32-blackout_01.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="PhysicsMaterial" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.827, 13.5 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Area2D
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+#var gravity = 600.0
+var velocity = Vector2()
+const FLOOR_NORMAL = Vector2.UP
+var can_be_mined setget can_be_mined_set, can_be_mined_get#= false
+#onready var playerNode = get_node(\"../Player\")
+
+func can_be_mined_set(new_value):
+	can_be_mined = new_value
+
+func can_be_mined_get():
+	return can_be_mined
+	
+	
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+	
+#func _physics_process(_delta: float) -> void:
+	
+	#velocity.y += gravity * _delta
+	#position *= velocity
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+#func _on_Area2D_body_entered(body: Node) -> void:
+	#if get_node(\"MinableMaterial\").global_position.x - 50 < body.global_position.x < get_node(\"MinableMaterial\").global_position.x or get_node(\"MinableMaterial\").global_position.x + 50 > body.global_position.x > get_node(\"MinableMaterial\").global_position.x:
+	#if (get_node(\"MinableMaterial\").global_position).distance_to(body.global_position) < 1000:
+#	can_be_mined = true
+#	print (can_be_mined)
+#	if playerNode.mined_get() == true:
+#	queue_free()#destroy the ore
+
+
+#func _on_MinableMaterial_area_entered(_area):
+#	pass 
+#	can_be_mined = true
+#	print (can_be_mined)
+#	if _area.mined_get() == true:
+#	queue_free() #destroy the ore
+
+
+
+#func _on_MinableMaterial_body_entered(body):
+#	queue_free()
+
+
+
+
+func _on_MinableMaterial_body_entered(body: Node) -> void:
+	queue_free()
+"
+
+[sub_resource type="ShaderMaterial" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 17.8621, 14.4375 )
+
+[node name="Ore" type="StaticBody2D"]
+material = SubResource( 1 )
+physics_material_override = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.062, 0.875 )
+shape = SubResource( 3 )
+
+[node name="gems-32-blackout_01" type="Sprite" parent="."]
+position = Vector2( -0.06462, -0.0193954 )
+texture = ExtResource( 2 )
+
+[node name="MinableMaterial" type="Area2D" parent="."]
+script = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MinableMaterial"]
+material = SubResource( 5 )
+position = Vector2( -0.0625, 0.875 )
+shape = SubResource( 6 )
+[connection signal="body_entered" from="MinableMaterial" to="." method="_on_MinableMaterial_body_entered"]
+[connection signal="body_exited" from="MinableMaterial" to="." method="_on_MinableMaterial_body_exited"]
