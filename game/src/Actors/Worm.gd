@@ -13,7 +13,6 @@ func _on_StompDetector_body_entered(body: Node) -> void:
 	get_node("CollisionShape2D").disabled = true #turns off enemy collider so you can't die if you bounce on it
 	queue_free() #kills the worm
 
-
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
 	if is_on_wall():
