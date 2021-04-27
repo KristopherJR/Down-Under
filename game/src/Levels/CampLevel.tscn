@@ -65,14 +65,7 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 5
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1621.3, 1050.18 )
-
-[node name="Camera2D" parent="Player" index="2"]
-limit_right = 1920
-limit_bottom = 1000000000
+frame = 0
 
 [node name="DoorHitbox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1728.91, 1006.86 )
@@ -97,9 +90,9 @@ position = Vector2( 511.25, 1636.54 )
 
 [node name="Controls Info" type="TextureButton" parent="."]
 margin_left = 361.928
-margin_top = 958.79
+margin_top = 969.79
 margin_right = 421.928
-margin_bottom = 1038.79
+margin_bottom = 1049.79
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 10 )
 texture_hover = ExtResource( 11 )
@@ -112,9 +105,9 @@ __meta__ = {
 
 [node name="CaveRulesInfo" type="TextureButton" parent="."]
 margin_left = 1482.63
-margin_top = 958.79
+margin_top = 970.79
 margin_right = 1542.63
-margin_bottom = 1038.79
+margin_bottom = 1050.79
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 10 )
 texture_hover = ExtResource( 11 )
@@ -126,6 +119,13 @@ __meta__ = {
 [node name="CaveRules" parent="." instance=ExtResource( 9 )]
 
 [node name="InventoryScreen" parent="." instance=ExtResource( 13 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1621.3, 1050.18 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_right = 1920
+limit_bottom = 1000000000
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_Area2D_body_entered"]
 [connection signal="pressed" from="Controls Info" to="PopupTextBox" method="_on_Controls_Info_pressed"]
