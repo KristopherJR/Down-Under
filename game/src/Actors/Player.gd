@@ -89,7 +89,12 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 	return out
 	
 	
-	
+func _input(event):
+	if event.is_action_pressed("pickup"):
+		if $PickupZone.items_in_range.size() > 0:
+			var pickup_item = $PickupZone.items_in_range.values()[0]
+			pickup_item.pick_up_item(self)
+			$PickupZone.items_in_range.erase(pickup_item)
 
 
 

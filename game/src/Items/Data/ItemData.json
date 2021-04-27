@@ -1,0 +1,35 @@
+{
+	"Red Gem": {
+		"ItemCategory": "Resource",
+		"StackSize": 5,
+		"Description": "A red gem that can be collected as treasure."	
+		},
+	"Blue Gem": {
+		"ItemCategory": "Resource",
+		"StackSize": 3,
+		"Description": "A blue gem that can be collected as treasure."	
+		},
+	"Orange Gem": {
+		"ItemCategory": "Resource",
+		"StackSize": 5,
+		"Description": "An orange gem that can be collected as treasure."	
+		},
+	"Pink Gem": {
+		"ItemCategory": "Resource",
+		"StackSize": 3,
+		"Description": "A pink gem that can be collected as treasure."	
+		},
+	"Health":{
+		"ItemCategory": "Consumable",
+		"AddHealth": 1,
+		"StackSize": 1,
+		"Description": "It grants one extra full health when consumed."
+		},
+	"Half Health":{
+		"ItemCategory": "Consumable",
+		"AddHealth": 1,
+		"StackSize": 3,
+		"Description": "It grants one extra half health when consumed."
+		}
+
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/GameObjects/Campfire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://du_assets/music/camp_music.wav" type="AudioStream" id=5]
 [ext_resource path="res://src/Levels/CampLevel.gd" type="Script" id=6]
 [ext_resource path="res://src/Mining/Ore.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/InfoTextBox/ControlInfo.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/InfoTextBox/CaveRulesInfo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://du_assets/textures/text_popups/info_sign.png" type="Texture" id=10]
+[ext_resource path="res://du_assets/textures/text_popups/info_box_exclamation.png" type="Texture" id=11]
+[ext_resource path="res://du_assets/textures/text_popups/Down_Under-removebg-preview.png" type="Texture" id=12]
+[ext_resource path="res://src/Inventory/InventoryScreen.tscn" type="PackedScene" id=13]
 [ext_resource path="res://du_assets/textures/sky_tile.png" type="Texture" id=15]
 
 [sub_resource type="Animation" id=1]
@@ -88,7 +94,41 @@ shape = SubResource( 2 )
 
 [node name="Ore" parent="." instance=ExtResource( 7 )]
 position = Vector2( 511.25, 1636.54 )
+
+[node name="Controls Info" type="TextureButton" parent="."]
+margin_left = 361.928
+margin_top = 958.79
+margin_right = 421.928
+margin_bottom = 1038.79
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupTextBox" parent="." instance=ExtResource( 8 )]
+
+[node name="CaveRulesInfo" type="TextureButton" parent="."]
+margin_left = 1482.63
+margin_top = 958.79
+margin_right = 1542.63
+margin_bottom = 1038.79
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaveRules" parent="." instance=ExtResource( 9 )]
+
+[node name="InventoryScreen" parent="." instance=ExtResource( 13 )]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_Area2D_body_entered"]
+[connection signal="pressed" from="Controls Info" to="PopupTextBox" method="_on_Controls_Info_pressed"]
+[connection signal="pressed" from="CaveRulesInfo" to="CaveRules" method="_on_CaveRulesInfo_pressed"]
 
 [editable path="Player"]
