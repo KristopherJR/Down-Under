@@ -1,6 +1,6 @@
 Team: The Boomers & The Zoomer
 Project Title: Down Under
-Developers: Kristopher Randle
+Developers: Kristopher Randle & Abdul Roqeeb-Oluruntele
 
 Version: 0.3.6
 Date: 27-04-2021
