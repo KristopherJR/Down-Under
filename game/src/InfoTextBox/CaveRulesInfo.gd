@@ -3,7 +3,6 @@ extends CanvasLayer
 func set_visible(is_visible):
 	$CaveRulesNode.visible = is_visible
 
-
 func _ready():
 	set_visible(false)
 

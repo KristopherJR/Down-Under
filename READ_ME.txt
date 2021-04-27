@@ -2,12 +2,12 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle & Abdul Roqeeb-Oluruntele
 
-Version: 0.3.6
+Version: 0.3.7
 Date: 27-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Final Version. The game has an inventory system, enemies, mining, oxygen and coins.
+Added sign animation.
 
 // --------------- NEW SCENES --------------- //
 

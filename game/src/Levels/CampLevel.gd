@@ -9,7 +9,6 @@ func _ready() -> void:
 	
 	$Player.position = spawn_location
 	$Player/AnimatedSprite.set_flip_h(GlobalLevelData.temp_flip)
-	
 	GlobalLevelData.spawn_location = Vector2(235.298,1043.18)
 
 func _on_AudioStreamPlayer_finished() -> void:
