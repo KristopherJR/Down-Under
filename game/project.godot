@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Down Under"
+config/name="Down Under Editing"
 run/main_scene="res://src/Screens/MainMenu.tscn"
 config/use_custom_user_dir=true
 config/Version="0.1.0"
