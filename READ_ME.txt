@@ -1,13 +1,13 @@
 Team: The Boomers & The Zoomer
 Project Title: Down Under
-Developers: Kristopher Randle & Abdul Roqeeb-Oluruntele
+Developers: Kristopher Randle
 
-Version: 0.3.7
-Date: 27-04-2021
+Version: 0.3.8
+Date: 28-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Added sign animation.
+Fixed bug that crashed game when pressing F.
 
 // --------------- NEW SCENES --------------- //
 
