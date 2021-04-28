@@ -35,7 +35,8 @@ game_over: "Under_the_hot_sun_110_BPM.wav" from "musicloopsfor8bitgames"
 ---------- SFX ----------
 
 node_break: "Damage04.wav" from "8bitsfxpack_windows"
-collect_coin/item: "Retro_8-Bit_Game_Pickup_Object_Item_Coin_01.wav" from "8bitretrogamesfix_windows.zip"
+collect_coin/item: "Retro_8-Bit_Game_Pickup_Object_Item_Coin_01.wav" from "8bitretrogamesfx_windows.zip"
+gem_collect: "Retro_8-Bit_Game-Pickup_Object_Item_Coin_11.wav" from "8bitretrogamesfx_windows.zip"
 life_loss: "Death02.wav" from "8bitsfxpack_windows"
 death: tbd
 gain_life: tbd

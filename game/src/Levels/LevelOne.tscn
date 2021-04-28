@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://src/Items/ItemDrops/ItemDropOrangeGem.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Items/ItemDrops/ItemDropBlueGem.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Items/ItemDrops/ItemDropPinkGem.tscn" type="PackedScene" id=16]
+[ext_resource path="res://du_assets/textures/text_popups/get_out_text.png" type="Texture" id=17]
+[ext_resource path="res://du_assets/sfx/gem_collect.wav" type="AudioStream" id=18]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
 [sub_resource type="Animation" id=1]
@@ -674,7 +676,7 @@ volume_db = -20.0
 [node name="InventoryScreen" parent="." instance=ExtResource( 12 )]
 
 [node name="ItemDropBlueG" parent="." instance=ExtResource( 15 )]
-position = Vector2( 332.046, 152.554 )
+position = Vector2( 312, 184 )
 
 [node name="ItemDropBlueG2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1170.84, 1127.54 )
@@ -686,7 +688,33 @@ position = Vector2( 2696.56, 1057.75 )
 position = Vector2( 1626.17, 266.455 )
 
 [node name="ItemDropPinkG2" parent="." instance=ExtResource( 16 )]
-position = Vector2( 598.325, 146.01 )
+position = Vector2( 600, 112 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 904.0
+margin_top = 936.0
+margin_right = 1244.0
+margin_bottom = 965.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spikes" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2816.07, 688.085 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2848.12, 688.085 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2880.17, 688.085 )
+
+[node name="Spikes4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2912.22, 688.085 )
+
+[node name="GemCollectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -15.0
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]
 [connection signal="finished" from="TimeRunningOutMusic" to="." method="_on_TimeRunningOutMusic_finished"]

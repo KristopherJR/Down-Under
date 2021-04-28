@@ -6,15 +6,6 @@ var max_air: = 150.0
 var air_timer: = max_air #air timer set to 2:30 minutes (150 seconds)
 var inverse_air_timer: = 0.0
 
-var full_heart: = ImageTexture.new()
-var full_heart_image: = Image.new()
-
-var half_heart: = ImageTexture.new()
-var half_heart_image: = Image.new()
-
-var empty_heart: = ImageTexture.new()
-var empty_heart_image: = Image.new()
-
 var playing_time_up_music: = false
 
 
@@ -22,16 +13,7 @@ func _ready() -> void:
 	$AudioStreamPlayer.play(0.0) #play the song at the start of the level
 	_connect_coins()
 	_connect_ores()
-	
-	full_heart_image.load("res://du_assets/textures/health_icon/heart_full.png")
-	full_heart.create_from_image(full_heart_image)
-	
-	half_heart_image.load("res://du_assets/textures/health_icon/heart_half.png")
-	half_heart.create_from_image(half_heart_image)
-	
-	empty_heart_image.load("res://du_assets/textures/health_icon/heart_empty.png")
-	empty_heart.create_from_image(empty_heart_image)
-	
+	_connect_gems()
 	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
 	
 func _connect_coins():
@@ -54,7 +36,14 @@ func _on_ore_break():
 	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
 	$OreBreakEffect.play(0.0)
 
+func _connect_gems():
+	var gems = get_tree().get_nodes_in_group("gems")
+	for gem in gems:
+		gem.connect("gem_collected", self, "_on_gem_collect")	
 	
+func _on_gem_collect():
+	$GemCollectSFX.play(0.0)
+
 func _calculate_time_string() -> String:
 	var minutes = air_timer / 60
 	var seconds = fmod(air_timer, 60)
@@ -81,19 +70,19 @@ func _calculate_oxygen_percentage():
 	
 func _update_heart_HUD():
 	if $Player.health == 3.0:
-		$PlayerHUD/HealthHUD/HeartIcon3.texture = full_heart
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = load("res://du_assets/textures/health_icon/heart_full.png")
 	if $Player.health == 2.5:
-		$PlayerHUD/HealthHUD/HeartIcon3.texture = half_heart
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = load("res://du_assets/textures/health_icon/heart_half.png")
 	if $Player.health == 2.0:
-		$PlayerHUD/HealthHUD/HeartIcon3.texture = empty_heart
+		$PlayerHUD/HealthHUD/HeartIcon3.texture = load("res://du_assets/textures/health_icon/heart_empty.png")
 	if $Player.health == 1.5:
-		$PlayerHUD/HealthHUD/HeartIcon2.texture = half_heart
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = load("res://du_assets/textures/health_icon/heart_half.png")
 	if $Player.health == 1.0:
-		$PlayerHUD/HealthHUD/HeartIcon2.texture = empty_heart
+		$PlayerHUD/HealthHUD/HeartIcon2.texture = load("res://du_assets/textures/health_icon/heart_empty.png")
 	if $Player.health == 0.5:
-		$PlayerHUD/HealthHUD/HeartIcon1.texture = half_heart
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = load("res://du_assets/textures/health_icon/heart_half.png")
 	if $Player.health == 0.0:
-		$PlayerHUD/HealthHUD/HeartIcon1.texture = empty_heart
+		$PlayerHUD/HealthHUD/HeartIcon1.texture = load("res://du_assets/textures/health_icon/heart_empty.png")
 	
 func _physics_process(delta: float) -> void:
 	if air_timer > 0:

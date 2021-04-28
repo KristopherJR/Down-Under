@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gem_collect.wav-77300acd5362f6a84e891af3f967dc6d.sample"
+
+[deps]
+
+source_file="res://du_assets/sfx/gem_collect.wav"
+dest_files=[ "res://.import/gem_collect.wav-77300acd5362f6a84e891af3f967dc6d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

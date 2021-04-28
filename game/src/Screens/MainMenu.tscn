@@ -100,7 +100,7 @@ margin_bottom = 195.0
 [node name="version_label" type="Label" parent="MarginContainer/VBoxContainer/Title and Version/VBoxContainer"]
 margin_right = 375.0
 margin_bottom = 48.0
-text = "Version: 0.4.2
+text = "Version: 0.4.3
 Developers: Kristopher Randle & Abdul-Roqeeb Oloruntele
 Team: The Boomers & The Zoomer"
 __meta__ = {
