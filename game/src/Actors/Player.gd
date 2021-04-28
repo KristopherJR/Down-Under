@@ -27,6 +27,7 @@ func _on_EnemyDetector_body_entered(_body: Node) -> void:
 		
 		queue_free() #kill character when an enemy touches player
 		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
+		GlobalLevelData.coin_total = 0
 
 func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0

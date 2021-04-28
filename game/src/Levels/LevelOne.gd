@@ -97,6 +97,7 @@ func _physics_process(delta: float) -> void:
 	if air_timer <= 0:
 		get_node("Player").queue_free() #kill the player when they run out of time
 		get_tree().change_scene("res://src/Screens/GameOverScreen.tscn")
+		GlobalLevelData.coin_total = 0
 		
 	_update_heart_HUD()
 

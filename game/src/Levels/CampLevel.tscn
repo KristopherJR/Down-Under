@@ -96,7 +96,7 @@ tile_data = PoolIntArray( 3211361, 12, 0, 3407899, 27, 0, 3539006, 26, 0, 353901
 [node name="campfire" parent="." instance=ExtResource( 1 )]
 position = Vector2( 184.102, 1024.05 )
 scale = Vector2( 0.165854, 0.165854 )
-frame = 2
+frame = 0
 
 [node name="DoorHitbox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1728.91, 1006.86 )
