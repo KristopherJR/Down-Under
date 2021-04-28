@@ -2,7 +2,7 @@ extends Node2D
 
 signal cave_exited(spawn_at)
 
-var max_air: = 20.0
+var max_air: = 150.0
 var air_timer: = max_air #air timer set to 2:30 minutes (150 seconds)
 var inverse_air_timer: = 0.0
 
@@ -53,6 +53,7 @@ func _on_ore_break():
 	GlobalLevelData.coin_total += 10
 	$PlayerHUD/CoinHUD/CoinCounter/value_label.text = String(GlobalLevelData.coin_total)
 	$OreBreakEffect.play(0.0)
+
 	
 func _calculate_time_string() -> String:
 	var minutes = air_timer / 60

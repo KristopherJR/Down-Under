@@ -80,10 +80,12 @@ func select_animation() -> void:
 		
 	if Input.is_action_just_pressed("mining"):
 		isMining = true
+		$AnimatedSprite.play("mining")
+		
 		
 	if Input.is_action_just_released("mining"):
 		isMining = false
-		
+		$AnimatedSprite.play("idle_right")
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
 	var out: = linear_velocity
 	out.y = -impulse
