@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://du_assets/sfx/node_break.wav" type="AudioStream" id=11]
 [ext_resource path="res://src/Inventory/InventoryScreen.tscn" type="PackedScene" id=12]
 [ext_resource path="res://du_assets/music/time_running_out.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropOrangeGem.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropBlueGem.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Items/ItemDrops/ItemDropPinkGem.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
 [sub_resource type="Animation" id=1]
@@ -664,11 +667,26 @@ position = Vector2( 1024, 1120 )
 stream = ExtResource( 11 )
 volume_db = -15.0
 
-[node name="InventoryScreen" parent="." instance=ExtResource( 12 )]
-
 [node name="TimeRunningOutMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 volume_db = -20.0
+
+[node name="InventoryScreen" parent="." instance=ExtResource( 12 )]
+
+[node name="ItemDropBlueG" parent="." instance=ExtResource( 15 )]
+position = Vector2( 332.046, 152.554 )
+
+[node name="ItemDropBlueG2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1170.84, 1127.54 )
+
+[node name="ItemDropOrangeG" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2696.56, 1057.75 )
+
+[node name="ItemDropPinkG" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1626.17, 266.455 )
+
+[node name="ItemDropPinkG2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 598.325, 146.01 )
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]
 [connection signal="finished" from="TimeRunningOutMusic" to="." method="_on_TimeRunningOutMusic_finished"]
