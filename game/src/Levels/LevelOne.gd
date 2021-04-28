@@ -2,7 +2,7 @@ extends Node2D
 
 signal cave_exited(spawn_at)
 
-var max_air: = 150.0
+var max_air: = 20.0
 var air_timer: = max_air #air timer set to 2:30 minutes (150 seconds)
 var inverse_air_timer: = 0.0
 
@@ -14,6 +14,8 @@ var half_heart_image: = Image.new()
 
 var empty_heart: = ImageTexture.new()
 var empty_heart_image: = Image.new()
+
+var playing_time_up_music: = false
 
 
 func _ready() -> void:
@@ -69,7 +71,11 @@ func _calculate_oxygen_percentage():
 	var green_color_decrement = (percentage * 2.5) + 25
 	
 	var new_color: = Color8(red_color_increment,green_color_decrement,19,255)
-	
+	if percentage < 15 && playing_time_up_music == false:
+		playing_time_up_music = true
+		$AudioStreamPlayer.stop()
+		$TimeRunningOutMusic.play(0.0)
+		
 	get_node("PlayerHUD").shift_color(new_color)
 	
 func _update_heart_HUD():
@@ -102,9 +108,15 @@ func _physics_process(delta: float) -> void:
 	_update_heart_HUD()
 
 func _on_AudioStreamPlayer_finished() -> void:
-	$AudioStreamPlayer.play(0.0) #loops the song when it's finished
+	if playing_time_up_music == false:
+		$AudioStreamPlayer.play(0.0) #loops the song when it's finished
 
 func _on_MusicFadeArea_body_entered(_body: Node) -> void:
 	$AnimationPlayer.play("music_fade_in")
 	GlobalLevelData.spawn_location = Vector2(1621.298,1050.185)
 	GlobalLevelData.temp_flip = true
+
+
+func _on_TimeRunningOutMusic_finished() -> void:
+	if playing_time_up_music == true:
+		$AudioStreamPlayer.play(0.0) #loops the song when it's finished

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Levels/CampLevel.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://du_assets/textures/tiles/cave_bg.png" type="Texture" id=10]
 [ext_resource path="res://du_assets/sfx/node_break.wav" type="AudioStream" id=11]
 [ext_resource path="res://src/Inventory/InventoryScreen.tscn" type="PackedScene" id=12]
+[ext_resource path="res://du_assets/music/time_running_out.wav" type="AudioStream" id=13]
 [ext_resource path="res://src/Actors/Worm.tscn" type="PackedScene" id=30]
 
 [sub_resource type="Animation" id=1]
@@ -664,5 +665,10 @@ stream = ExtResource( 11 )
 volume_db = -15.0
 
 [node name="InventoryScreen" parent="." instance=ExtResource( 12 )]
+
+[node name="TimeRunningOutMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -20.0
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="MusicFadeArea" to="." method="_on_MusicFadeArea_body_entered"]
+[connection signal="finished" from="TimeRunningOutMusic" to="." method="_on_TimeRunningOutMusic_finished"]
