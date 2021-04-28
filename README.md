@@ -1,5 +1,5 @@
 # Down Under
-Down Under is a 2D side-scrolling platformer game made by the team "The Boomers and The Zoomer" for COMP2411. The game will be developed using the GoDot game engine, utilizing the built-in GDScript. The game is compatible with keyboard, mouse and controller and as of version: 0.3.6 is ready for submission as our group protoype. All of the initial "Must-Have" requirements have been met, and some of the "Should-Have" requirements have also been met.
+Down Under is a 2D side-scrolling platformer game made by the team "The Boomers and The Zoomer" for COMP2411. The game will be developed using the GoDot game engine, utilizing the built-in GDScript. The game is compatible with keyboard, mouse and controller and as of version: 0.4.3 is ready for submission as our group protoype. All of the initial "Must-Have" requirements have been met, and some of the "Should-Have" requirements have also been met.
 
 ![game_thumbnail1](https://user-images.githubusercontent.com/47984645/116289990-e6891100-a78a-11eb-81a1-71b20cf5ac2b.png)
 
