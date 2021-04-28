@@ -92,3 +92,4 @@ fullscreen={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="coins"
 2d_physics/layer_4="world"
+2d_physics/layer_5="ItemDrop"
