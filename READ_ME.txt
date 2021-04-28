@@ -2,12 +2,12 @@ Team: The Boomers & The Zoomer
 Project Title: Down Under
 Developers: Kristopher Randle
 
-Version: 0.3.9
+Version: 0.4
 Date: 28-04-2021
 
 // --------------- VERSION NOTES --------------- //
 
-Fixed bug that caused Player coins to NOT reset when dying. Coins will now reset on death.
+Fixed bug that allowed the player the jump through the door hitbox when exiting the cave.
 
 // --------------- NEW SCENES --------------- //
 
