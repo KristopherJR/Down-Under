@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Pause/Pause.gd" type="Script" id=1]
 [ext_resource path="res://du_assets/textures/tiles/cave_wall_3.png" type="Texture" id=2]
@@ -8,6 +8,13 @@
 [ext_resource path="res://du_assets/textures/pause_options/load_game.png" type="Texture" id=6]
 [ext_resource path="res://du_assets/textures/pause_options/options.png" type="Texture" id=7]
 [ext_resource path="res://du_assets/textures/pause_options/main_menu.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://du_assets/font/DownUnderFont.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 72
+font_data = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
 pause_mode = 2
@@ -19,6 +26,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 132.55
+margin_top = -276.402
+margin_right = 681.55
+margin_bottom = -216.402
+rect_pivot_offset = Vector2( -388.487, 137.991 )
+custom_fonts/font = SubResource( 2 )
+text = "(Work in progress)"
+align = 1
+
+[node name="Label2" type="Label" parent="PauseBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 128.863
+margin_top = -131.429
+margin_right = 677.863
+margin_bottom = -71.4294
+rect_pivot_offset = Vector2( -388.487, 137.991 )
+custom_fonts/font = SubResource( 2 )
+text = "(Work in progress)"
+align = 1
+
+[node name="Label3" type="Label" parent="PauseBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 133.344
+margin_top = 27.4915
+margin_right = 682.344
+margin_bottom = 87.4915
+rect_pivot_offset = Vector2( -388.487, 137.991 )
+custom_fonts/font = SubResource( 2 )
+text = "(Work in progress)"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,10 +137,14 @@ __meta__ = {
 }
 
 [node name="Options" type="Button" parent="."]
-margin_left = 737.308
-margin_top = 535.143
-margin_right = 1929.31
-margin_bottom = 910.143
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -222.692
+margin_top = -4.85699
+margin_right = 969.31
+margin_bottom = 370.143
 rect_scale = Vector2( 0.298415, 0.318607 )
 icon = ExtResource( 7 )
 __meta__ = {
@@ -96,10 +152,14 @@ __meta__ = {
 }
 
 [node name="MainMenu" type="Button" parent="."]
-margin_left = 732.551
-margin_top = 692.118
-margin_right = 1926.55
-margin_bottom = 1070.12
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -227.449
+margin_top = 152.118
+margin_right = 966.55
+margin_bottom = 530.12
 rect_scale = Vector2( 0.30093, 0.316096 )
 icon = ExtResource( 8 )
 __meta__ = {
@@ -107,3 +167,4 @@ __meta__ = {
 }
 [connection signal="pressed" from="Resume" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
